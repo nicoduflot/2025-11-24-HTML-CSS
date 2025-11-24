@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <!-- Commentaire en HTML -->
     <!-- C'est aussi dans <head> que l'on met les appels vers les fichiers CSS et les scripst javascript -->
 </head>
+
 <body>
     <header role="banner">
         <div>
@@ -17,15 +19,16 @@
         <div>
             <ul>
                 <li>
-                    <a href="./index.html" target="_self" title="Aller à l'introduction au HTML - CSS" >Introduction HTML - CSS</a>
+                    <a href="./index.html" target="_self" title="Aller à l'introduction au HTML - CSS">Introduction HTML
+                        - CSS</a>
                 </li>
                 <li>
-                    <a href="./media.html" target="_self" title="les media en HTML - CSS" >Media</a>
+                    <a href="./media.html" target="_self" title="les media en HTML - CSS">Media</a>
                 </li>
                 <li>
-                    <a href="./contact.html" target="_self" title="Les formulaires en HTML - CSS" >Contact</a>
+                    <a href="./contact.html" target="_self" title="Les formulaires en HTML - CSS">Contact</a>
                 </li>
-            </ul>            
+            </ul>
         </div>
     </nav>
     <main>
@@ -36,6 +39,7 @@
             <nav>
                 <ul>
                     <li><a href="#balises-de-contenu-de-texte">Balises de contenu de texte</a></li>
+                    <li><a href="#balises-de-modification-de-texte">Balises de modification de texte</a></li>
                 </ul>
             </nav>
         </aside>
@@ -64,16 +68,15 @@
                     </p>
                 </article>
                 <article>
-                    <h4>Les listes</h4>
-                    <h5>Les listes non-ordonnées</h5>
-                    <h6>Les listes à un seul niveau</h6>
+                    <h4>Les listes non-ordonnées</h4>
+                    <h5>Les listes à un seul niveau</h5>
                     <ul>
                         <li>Élément de liste</li>
                         <li>Élément de liste</li>
                         <li>Élément de liste</li>
                         <li>Élément de liste</li>
                     </ul>
-                    <h6>Les listes à plusieurs niveaux</h6>
+                    <h5>Les listes à plusieurs niveaux</h5>
                     <ul type="square">
                         <li>Élément de liste</li>
                         <li>
@@ -93,8 +96,10 @@
                         <li>Élément de liste</li>
                         <li>Élément de liste</li>
                     </ul>
-                    <h5>Les listes ordonnées</h5>
-                    <h6>Les listes à un seul niveau</h6>
+                </article>
+                <article>
+                    <h4>Les listes ordonnées</h4>
+                    <h5>Les listes à un seul niveau</h5>
                     <ol>
                         <li>Élément de liste</li>
                         <li>Élément de liste</li>
@@ -129,7 +134,8 @@
                         <li>Élément de liste</li>
                     </ol>
                     <p>
-                        J'interromps la liste pour apporter des précision : il est possible de reprendre une liste à partir d'une numérotation indiquée.
+                        J'interromps la liste pour apporter des précision : il est possible de reprendre une liste à
+                        partir d'une numérotation indiquée.
                     </p>
                     <ol start="4">
                         <li>Élément de liste</li>
@@ -138,6 +144,152 @@
                         <li>Élément de liste</li>
                     </ol>
                 </article>
+                <article>
+                    <h4>Les listes "descriptives"</h4>
+                    <dl>
+                        <dt>Terme à décrire</dt>
+                        <dd>Description du terme précédent</dd>
+
+                        <dt>Deuxième terme à décrire</dt>
+                        <dd>Description du deuxième terme</dd>
+                    </dl>
+
+                    <dl>
+                        <dt>Paris</dt>
+                        <dd>Capitale de la France</dd>
+
+                        <dt>Marseille</dt>
+                        <dd>Il y fait souvent beau, c'est cool</dd>
+
+                        <dt>Lille</dt>
+                        <dd>"Les gens ont dans leurs yeux le bleu qui manque à leur décor"</dd>
+                    </dl>
+                </article>
+                <article>
+                    <h4>Les citations</h4>
+                    <blockquote>
+                        <p>
+                            La balise <code>&lt;blockquote&gt;</code> met en exergue son contenu en ajoutant des marges extérieur à gauche et à droite.
+                        </p>
+                    </blockquote>
+                    <p>
+                        Pour afficher une citation complète ( source, auteur, etc.) on va la compléter avec d'autres balise du même type.
+                    </p>
+                    <blockquote>
+                        <p>
+                            <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à outils de la communication.</q>
+                        </p>
+                        <p>
+                            <cite>Au guet ! (1989), Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997  (ISBN 2-84172-045-4), p. 173</cite>
+                        </p>
+                    </blockquote>
+                </article>
+                <article>
+                    <h4>Les tableaux</h4>
+                    <table border="1" cellspacing="0">
+                        <caption>Exemple de tableau complet</caption>
+                        <thead>
+                            <tr>
+                                <th>Entête n°1</th>
+                                <th>Entête n°2</th>
+                                <th>Entête n°3</th>
+                                <th>Entête n°4</th>
+                                <th>Entête n°5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="2">01</td>
+                                <td>02</td>
+                                <td>03</td>
+                                <td>04</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">01</td>
+                                <td>02</td>
+                                <td>03</td>
+                                <td>04</td>
+                                <td>05</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                                <td>04</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" rowspan="2">01</td>
+                                <td>02</td>
+                                <td>03</td>
+                                <td>04</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>02</td>
+                                <td>03</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Entête n°1</th>
+                                <th>Entête n°2</th>
+                                <th>Entête n°3</th>
+                                <th>Entête n°4</th>
+                                <th>Entête n°5</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <p>
+                        Tableau plus simple
+                    </p>
+                    <table border="1" cellspacing="0">
+                        <tr style="background-color: white;">
+                            <th></th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                        </tr>
+                        <tr>
+                            <th>1</th>
+                            <td>Cellule</td>
+                            <td>Cellule</td>
+                            <td>Cellule</td>
+                            <td>Cellule</td>
+                        </tr>
+                        <colgroup>
+                            <col />
+                            <col span="2" style="background-color: aqua;" />
+                            <col span="2" style="background-color: bisque;" />
+                        </colgroup>
+                        <tr>
+                            <th>2</th>
+                            <td>Cellule</td>
+                            <td>Cellule</td>
+                            <td>Cellule</td>
+                            <td>Cellule</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>Cellule</td>
+                            <td>Cellule</td>
+                            <td>Cellule</td>
+                            <td>Cellule</td>
+                        </tr>
+                        <tr>
+                            <th>4</th>
+                            <td>Cellule</td>
+                            <td>Cellule</td>
+                            <td>Cellule</td>
+                            <td>Cellule</td>
+                        </tr>
+                    </table>
+                </article>
+            </section>
+            <section>
+                <header>
+                    <h3 id="balises-de-modification-de-texte">Balises de modification de texte</h3>
+                </header>
             </section>
         </section>
         <section>
@@ -152,4 +304,5 @@
         </div>
     </footer>
 </body>
+
 </html>
