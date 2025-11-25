@@ -365,9 +365,52 @@
                     <h4>Les polices de caractères</h4>
                     <p>
                         La police par défaut des navigateurs est faîte pour de l'impression directe, avec empâtement
-                        (type Times New Roman), en revanche, sur des écran rétro-éclairés il sera plus confortable d'utiliser
+                        (type Times New Roman), en revanche, sur des écran rétro-éclairés il sera plus confortable
+                        d'utiliser
                         une police sans empâtement (type arial ou helvetica)
                     </p>
+                    <h5>Les tailles de polices et le problème du em</h5>
+                    <p>
+                        Le em représente la taille par défaut d'une police sur la page dans un paragraphe.<br />
+                        Quand on utilise par exemple h1, la taille généralement appliquée par le navigateur est de 2
+                        fois le cadratin
+                    </p>
+                    <p>
+                        Mais le em pose problème : il se calcule par rapport à la taille de la police du parent le plus
+                        proche.
+                    </p>
+                    <p>
+                        2em
+                    </p>
+                    <div style="font-size: 2em; border: 1px solid black">
+                        2em
+                        <div style="font-size: 2em; border: 1px solid black">
+                            2em
+                        </div>
+                    </div>
+                    <p>
+                        2rem
+                    </p>
+                    <div style="font-size: 2rem; border: 1px solid black">
+                        2rem
+                        <div style="font-size: 2rem; border: 1px solid black">
+                            2rem
+                        </div>
+                    </div>
+                </article>
+                <article>
+                    <h3 id="dimensions-web-et-css">Dimensions web et CSS</h3>
+                    <p>
+                        Par défaut dans le css user agent (css du navigateur), quand on donne une taille (hauteur ou
+                        largeur) à un élément, la taille est calculée par rapport au contenu de l'élément, c'est à dire
+                        qu'elle ne prend pas en compte la taille des marges intérieures (padding) ou de la largeur des
+                        bordures.
+                    </p>
+                    <p>
+                        le calcul des "boîtes" est en fait mis par défaut à la valeur "content-box"
+                    </p>
+                    <div style="box-sizing: content-box;width: 200px;height: 200px;border: 1px solid black;padding: 10px;"></div>
+                    <div style="box-sizing: border-box;width: 200px;height: 200px;border: 1px solid black; padding: 10px;"></div>
                 </article>
             </section>
         </section>

@@ -126,6 +126,23 @@ il est possible de centraliser des comportements et des "standard" de style dire
 
 Comme en CSS on peux déclarer des variables sous la forme --nom-de-variable ou --variable, etc. il diveint facile de maîtriser la maintenance et les changements dans le css
 
+Unités de tailles en CSS (en web)
+
+Unités les plus souvent utilisées en web
+
+px      =>  pixel il est possible de mesure avec des virgules, 23.8px)
+em      =>  cadratin. Historiquement unité de mesure en print sur les presses.
+            Le cadratin se calcul par rapport à la taille du parent
+rem     =>  cadratin racine, lui se calculera toujours depuis la taille racine du cadratin, 
+            - soit celle du navigateur 
+            - soit celle surchargée dans le :root
+%       =>  La taille définie en % se calcule par rapport à l'espace disponible autour de l'élément définie en %
+vw & vh =>  vw : viewport width (largeur de la surface d'affichage de l'appareil)
+            vh : viewport height ( hauteur d'affichage de l'appareil)
+            50vh => 50% de la taille d'affichage du l'appareil
+            si la largeur d'affichage du site 360px (100vw)
+            50vw = 180px
+
 */
 
 /* 
@@ -145,6 +162,10 @@ ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des impor
 }
 
 /* Déclaration générales */
+
+*{
+    box-sizing: border-box;
+}
 
 h1, h2{
     font-family: var(--heading-font);
