@@ -7,6 +7,7 @@
     <title>Introduction au HTML - CSS | Formation HTML - CSS</title>
     <!-- Commentaire en HTML -->
     <!-- C'est aussi dans <head> que l'on met les appels vers les fichiers CSS et les scripst javascript -->
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
@@ -36,10 +37,12 @@
             <h1>Introduction au HTML - CSS</h1>
         </header>
         <aside>
+            <span>Table des matières</span>
             <nav>
                 <ul>
                     <li><a href="#balises-de-contenu-de-texte">Balises de contenu de texte</a></li>
                     <li><a href="#balises-de-modification-de-texte">Balises de modification de texte</a></li>
+                    <li><a href="#mise-a-zero-du-css">Mise à zéro du CSS</a></li>
                 </ul>
             </nav>
         </aside>
@@ -297,7 +300,7 @@
                 </header>
                 <h4>Taille, police et la couleur du texte</h4>
                 <p>
-                    Dans les premières version du HTYML, il existait la balise <code>&lt;font&gt;</code> qui permettait
+                    Dans les premières version du HTML, il existait la balise <code>&lt;font&gt;</code> qui permettait
                     de changer <font size="4" face="Impact" color="red">la taille, la police et la couleur d'une section
                         de texte</font>. Mais cette balise n'est plus dans les normes HTML, désormais pour ce genre de
                     manipulation, on créera des classes CSS, qui seront utilisées ponctuellement pour décorer
@@ -345,6 +348,19 @@
             <header>
                 <h2>Bases en CSS</h2>
             </header>
+            <section>
+                <header>
+                    <h3 id="mise-a-zero-du-css">Mise à zéro du CSS</h3>
+                </header>
+                <article>
+                    <h4>Les polices de caractères</h4>
+                    <p>
+                    La police par défaut des navigateurs est faîte pour de l'impression directe, avec empâtement (type
+                    Times New Roman), en revanche, sur des écran rétro-éclairés il sera plus confortable d'utiliser une
+                    police sans empâtement (type arial ou helvetica)
+                </p>
+                </article>
+            </section>
         </section>
     </main>
     <footer>

@@ -1,0 +1,124 @@
+/*
+Commentaires en CSS
+Aucun impact sur la page liée
+*/
+
+
+/*
+CSS => Cascading Style Sheets (Feuilles de style en cascade)
+
+La cascade 
+
+Le principe de base est : si on déclare du CSS pour un élément, la quasi totalité des éléments à l'intérieur vont appliquer ce style par HÉRITAGE
+
+En revanche, si un style est défini en particulier (soit par défaut navigateur, soit pas des déclaration CSS du fichier), les éléments dans ce cas-ci n'appliqueront pas leur héritage.
+
+Les sélecteurs CSS
+
+Pour appliquer des propriétés CSS (du style) sur des éléments et les éléments à l'intérieur, il faut indiquer au navigateurs quels sont es élément en utilsants un Sélecteur CSS.
+
+# => sélécteur d'élément avec un id défini
+    ATTENTION : Les id d'une page doivent être UNIQUES
+    Ex : <h3 id="mise-a-zero-du-css">Mise à zéro du CSS</h3>
+
+    Sélécteur : 
+        #mise-a-zero-du-css{
+            -- CSS
+        }
+
+. => sélécteur par nom de classe
+    Ex : <span class="danger">code</span>
+
+    Sélécteur : 
+    .danger{
+        -- CSS
+    }
+
+balise => Sélécteur par nom de balise
+
+    Ex : <h1>Titre</h1>
+
+    Sélécteur : 
+    h1{
+        -- CSS
+    }
+
+ET maintenant, on mélange TOUT !
+il existe un norme dans l'écriture des sélécteurs (l'abbreviation emmet utilise cette norme)
+
+un élément particulier utilisant une classe particulière
+
+span.danger => tout les éléments span ayant au moins la classe danger
+
+    Quand le sélecteur de class .classe est "collé" à l'élément, cela veux dire que la classe est écrite dans l'attribut class de l'élément
+    <span class="danger"></span>
+
+span.danger.titi => <span class="titi danger"></span> un élément span ayant au moins la class danger ET la class titi dans l'attribut class
+
+Il est possible aussi de désigner par "filiation"
+
+main section => dans un élément main, tous les descendants de type section
+
+<main>
+    <section>
+    Corresponds au sélecteur
+        <section>
+            Corresponds au sélecteur
+        </section>
+        <section>
+            Corresponds au sélecteur
+        </section>
+    </section>
+</main>
+
+main > section => dans un élément main, tous les descendants directs type section
+
+<main>
+    <section>
+        Corresponds au sélecteur
+        <section>
+            Ne corresponds pas au sélecteur
+        </section>
+        <section>
+            Ne corresponds pas au sélecteur
+        </section>
+    </section>
+    <section>
+        Corresponds au sélecteur
+        <section>
+            Ne corresponds pas au sélecteur
+        </section>
+        <section>
+            Ne corresponds pas au sélecteur
+        </section>
+    </section>
+</main>
+
+article.news p => tous les descendant p d'une élément article ayant au moins la classe news
+
+Sélécteur "magique"
+
+* => tous les éléments de la page
+
+Pseudo-selecteurs
+
+Il existe des "espace" compris entre le contenu et le début d'une balise, le avant (::before) et le après (::after) dans lequel on peut déclarer du contenu (propriété content), des police de caractère pour ce contenu
+
+q::before, q::after{
+    color: #333;
+    font-family: Impact;
+    content: '<>';
+}
+
+Pseudo-classes 
+
+Certains éléments changent "d'état" dans leurs utilisation, par exemple, quand la souris passe "au dessus" (survol), un élément est dans l'état "survolé" :hover
+
+q:hover{
+    color: red;
+    background-color: black;
+}
+
+quand un élément q est survolé, la police de caractère devient rouge et la couleur de fond passe au noir.
+
+*/
