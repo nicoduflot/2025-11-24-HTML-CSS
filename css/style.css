@@ -157,7 +157,7 @@ ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des impor
     font-family: Arial, Helvetica, sans-serif;
     --site-title-font: Impact;
     --heading-font: Impact;
-    --site-font-size: 22px; 
+    --site-font-size: 1.15rem;
     font-size: var(--site-font-size); /* référence du 1rem */
 }
 

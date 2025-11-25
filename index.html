@@ -430,6 +430,95 @@
                         style="box-sizing: border-box;width: 200px;height: 200px;border: 1px solid black; padding: 10px;">
                     </div>
                 </article>
+                <article>
+                    <h3 id="les-position-en-css">Les positions en CSS</h3>
+                    <p>
+                        La propriété position permet d'afficher à l'écran des éléments ailleurs que là où ils sont
+                        déclarés
+                        dans le fichier HTML.
+                    </p>
+                    <p>
+                        les valeurs :
+                    </p>
+                    <ul>
+                        <li>
+                            static : par défaut pour les éléments
+                        </li>
+                        <li>
+                            Relative : l'élément est à sa position déclarée mais peut être décalé à l'aide des
+                            propriétés de
+                            type top, bottom, le décalage n'a pas d'impact sur les éléments suivants
+                        </li>
+                        <li>
+                            absolute : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers"
+                            ou
+                            "en-dessous". Les propriétés de type top, bottom... le placeront par rapport son ancètre le
+                            plus
+                            proche ayant la position relative.
+                        </li>
+                        <li>
+                            fixed : l'élément n'a plus de "contenance", les éléments suivants passeront "au travers" ou
+                            "en-dessous". Il est positionné par rapport au viewport et ne bougera pas quel que soit le
+                            défilement de la page.
+                        </li>
+                        <li>
+                            sticky : l'élément est tout d'abord placé selon son élément parent, mais lors du défilement
+                            vers le bas, bougera jusqu'à la disparition du viewport de l'élément parent, ensuite, il
+                            reste
+                            en haut du viewport avec le décalage indiqué par rapport à son élément parent.
+                        </li>
+                    </ul>
+                    <style>
+                        /*
+                        Les classes suivante sont écrites selon le principe D.R.Y. ou Don't Repeat Yourself
+                        On évite de répeter des déclaration similaire, on "factorise" ces déclarations
+
+                        plutôt que d'écrire 
+
+                        .carre-rouge{
+                            width: 50px;
+                            height: 50px;
+                            opacity: 1;
+                            background-color: darkred;
+                        }
+                        
+                        .carre-vert{
+                            width: 50px;
+                            height: 50px;
+                            opacity: 1;
+                            background-color: darkgreen;
+                        }
+
+                        on écrira :
+
+                        */
+                        .exemple-position{
+                            width: 200px;
+                            height: 200px;
+                            border-width: 3px;
+                            border-style: solid;
+                            border-color: black;
+                        }
+
+                        .carre-ex{
+                            width: 50px;
+                            height: 50px;
+                            opacity: 1;
+                        }
+
+                        .carre-rouge{
+                            background-color: darkred;
+                        }
+                        
+                        .carre-vert{
+                            background-color: darkgreen;
+                        }
+                    </style>
+                    <div class="exemple-position">
+                        <div class="carre-ex carre-rouge"></div>
+                        <div class="carre-ex carre-vert"></div>
+                    </div>
+                </article>
             </section>
         </section>
     </main>
