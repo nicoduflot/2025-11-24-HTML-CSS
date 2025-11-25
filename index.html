@@ -647,15 +647,23 @@
                             .div-flex{
                                 width: calc( (100% / 3) - var(--gap-ex-flex) );
                             }
+
+                            .div-flex-col-2{
+                                width: calc( ((100% / 3) * 2) - var(--gap-ex-flex) );
+                            }
+
+                            .div-flex-col-3{
+                                width: 100%;
+                            }
                         }
                     </style>
                     <div class="exemple-display-flex">
-                        <div class="div-flex">div-01</div>
+                        <div class="div-flex div-flex-col-2">div-01</div>
                         <div class="div-flex">div-02</div>
                         <div class="div-flex">div-03</div>
                         <div class="div-flex">div-04</div>
                         <div class="div-flex">div-05</div>
-                        <div class="div-flex">div-06</div>
+                        <div class="div-flex div-flex-col-3">div-06</div>
                         <div class="div-flex">div-07</div>
                         <div class="div-flex">div-08</div>
                         <div class="div-flex">div-09</div>
@@ -663,7 +671,67 @@
                         <div class="div-flex">div-11</div>
                         <div class="div-flex">div-12</div>
                         <div class="div-flex">div-13</div>
-                        <div class="div-flex">div-14</div>
+                        <div class="div-flex div-flex-col-2">div-14</div>
+                    </div>
+                    <h4>Display : grid</h4>
+                    <style>
+                        .exemple-display-grid, 
+                        .div-grid{
+                            border: 1px solid black;
+                        }
+                        .exemple-display-grid{
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            --gap-ex-grid: 0.5rem;
+                            gap: var(--gap-ex-grid);
+                            padding: var(--gap-ex-grid);
+                        }
+
+                        .div-grid{
+                            padding: var(--gap-ex-grid);
+                            min-height: 100px;
+                        }
+
+                        @media screen and (min-width: 700px) {
+                            .exemple-display-grid{
+                                 grid-template-columns: 1fr 1fr;
+                            }
+                        }
+                        
+                        @media screen and (min-width: 900px) {
+                            .exemple-display-grid{
+                                 grid-template-columns: 1fr 1fr 1fr;
+                            }
+
+                            .grid-div-col-2{
+                                grid-column: span 2;
+                            }
+                            
+                            .grid-div-col-3{
+                                grid-column: span 3;
+                            }
+
+                            .grid-div-row-2{
+                                grid-row: span 2;
+                            }
+                        }
+
+                    </style>
+                    <div class="exemple-display-grid">
+                        <div class="div-grid grid-div-col-2">div-01</div>
+                        <div class="div-grid">div-02</div>
+                        <div class="div-grid">div-03</div>
+                        <div class="div-grid">div-04</div>
+                        <div class="div-grid">div-05</div>
+                        <div class="div-grid grid-div-col-3">div-06</div>
+                        <div class="div-grid grid-div-row-2">div-07</div>
+                        <div class="div-grid">div-08</div>
+                        <div class="div-grid">div-09</div>
+                        <div class="div-grid grid-div-row-2 grid">div-10</div>
+                        <div class="div-grid">div-11</div>
+                        <div class="div-grid">div-12</div>
+                        <div class="div-grid">div-13</div>
+                        <div class="div-grid grid-div-col-2">div-14</div>
                     </div>
                 </article>
             </section>
