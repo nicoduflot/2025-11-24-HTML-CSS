@@ -611,6 +611,60 @@
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae dolores fuga maiores. Ea, corporis tenetur. Ipsam, dolorum voluptatem? Sit odit magni dolor, eos officiis voluptates ad minima quidem praesentium harum?
                     </p>
+                    <h4>Display : block, inline et inline-block dans un flux</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. <span style="display: inline;"><b>Recusandae possimus</b></span> dignissimos <span style="display: block;"><b>reprehenderit</b></span> ipsa qui voluptatem obcaecati, ullam exercitationem blanditiis omnis temporibus ipsum odit perferendis voluptates quis iste ratione quo iusto. Lorem ipsum dolor sit amet consectetur, <span style="display: inline-block;"><b>adipisicing elit</b></span>. Nostrum id qui neque itaque laborum voluptatum delectus, blanditiis culpa cum obcaecati earum, provident animi eius. Molestiae, distinctio. Ea natus repellat labore?
+                    </p>
+                    <h4>Display flex</h4>
+                    <style>
+                        .exemple-display-flex, 
+                        .div-flex{
+                            border: 1px solid black;
+                        }
+                        .exemple-display-flex{
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: flex-start;
+                            --gap-ex-flex: 0.5rem;
+                            padding-left: var(--gap-ex-flex);
+                            padding-bottom: var(--gap-ex-flex);
+                        }
+
+                        .div-flex{
+                            padding: var(--gap-ex-flex);
+                            width: 100%;
+                            margin-top: var(--gap-ex-flex);
+                            margin-right: var(--gap-ex-flex);
+                        }
+
+                        @media screen and (min-width: 700px) {
+                            .div-flex{
+                                width: calc( 50% - var(--gap-ex-flex) );
+                            }
+                        }
+                        
+                        @media screen and (min-width: 900px) {
+                            .div-flex{
+                                width: calc( (100% / 3) - var(--gap-ex-flex) );
+                            }
+                        }
+                    </style>
+                    <div class="exemple-display-flex">
+                        <div class="div-flex">div-01</div>
+                        <div class="div-flex">div-02</div>
+                        <div class="div-flex">div-03</div>
+                        <div class="div-flex">div-04</div>
+                        <div class="div-flex">div-05</div>
+                        <div class="div-flex">div-06</div>
+                        <div class="div-flex">div-07</div>
+                        <div class="div-flex">div-08</div>
+                        <div class="div-flex">div-09</div>
+                        <div class="div-flex">div-10</div>
+                        <div class="div-flex">div-11</div>
+                        <div class="div-flex">div-12</div>
+                        <div class="div-flex">div-13</div>
+                        <div class="div-flex">div-14</div>
+                    </div>
                 </article>
             </section>
         </section>
