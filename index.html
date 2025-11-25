@@ -36,7 +36,7 @@
         <header>
             <h1>Introduction au HTML - CSS</h1>
         </header>
-        <aside>
+        <aside class="toc">
             <span>Table des matières</span>
             <nav>
                 <ul>
@@ -299,58 +299,72 @@
                 <header>
                     <h3 id="balises-de-modification-de-texte">Balises de modification de texte</h3>
                 </header>
-                <h4>Taille, police et la couleur du texte</h4>
-                <p>
-                    Dans les premières version du HTML, il existait la balise <code>&lt;font&gt;</code> qui permettait
-                    de changer <font size="4" face="Impact" color="red">la taille, la police et la couleur d'une section
-                        de texte</font>. Mais cette balise n'est plus dans les normes HTML, désormais pour ce genre de
-                    manipulation, on créera des classes CSS, qui seront utilisées ponctuellement pour décorer
-                    au besoin des section de texte.
-                </p>
-                <style>
-                    .danger {
-                        font-size: 18px;
-                        font-family: Impact;
-                        color: #ff0000;
-                    }
+                <article>
+                    <h4>Taille, police et la couleur du texte</h4>
+                    <p>
+                        Dans les premières version du HTML, il existait la balise <code>&lt;font&gt;</code> qui
+                        permettait
+                        de changer <font size="4" face="Impact" color="red">la taille, la police et la couleur d'une
+                            section
+                            de texte</font>. Mais cette balise n'est plus dans les normes HTML, désormais pour ce genre
+                        de
+                        manipulation, on créera des classes CSS, qui seront utilisées ponctuellement pour décorer
+                        au besoin des section de texte.
+                    </p>
+                    <style>
+                        .danger {
+                            font-size: 18px;
+                            font-family: Impact;
+                            color: #ff0000;
+                        }
 
-                    .titi {
-                        font-size: 18px;
-                        font-family: Impact;
-                        color: #ff0000;
-                    }
-                </style>
-                <p>
-                    On utilise le plus souvent la balise <code>&lt;span&gt;</code>, qui recevra la classe pour changer
-                    <span class="danger">l'apparence du texte</span>.
-                </p>
-                <p>
-                    <code>&lt;span&gt;</code> ne sert qu'à faire ressortir visuellement du texte, pour avoir un impact
-                    sur le <span class="titi">référencement</span> il existe d'autre balises.
-                </p>
-                <h3>Le gras et l'italique</h3>
-                <p>
-                    Pour mettre en gras ou en italique, il existe pour chacun des cas deux balises. Les balises qui ne
-                    servent qu'à attirer l'attention du lecteur sont &lt;b&gt; <b>pour le gras</b> et &lt;i&gt; <i>pour
-                        l'italique</i>.<br />
-                    Pour attirer l'attention du lecteur ET signifier une importance sémantique qui impacte le
-                    référencement, on utilisera &lt;strong&gt; <strong>pour le gras</strong> et l'importance sémantique
-                    sur la force du terme et &lt;em&gt; <em>pour l'italique</em> et ajouter de l'emphase à la sémantique
-                    du terme.
-                </p>
-                <h3>D'autres mise en forme de texte</h3>
-                <p>
-                    A la base, le HTML servait principalement pour l'impression directe de son contenu, c'est pour cela
-                    qu'il est toujours possible de <u>souligner</u>, <s>de biffer</s> ou de <mark>surligner au fluo du
-                        texte</mark>.<br />
-                    On ne souligne jamais en HTML, car les utilisateurs pourraient pense qu'il s'agit d'un hyperlien, et
-                    ils pourraient pense qu'il s'agit d'un lien cassé.
-                </p>
-                <p>
-                    Une surface de 45m<sup>2</sup><br />
-                    Un volume de 3m<sup>3</sup><br />
-                    De l'acide sulfurique en oxydo-réduction H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>&#x21CC;
-                </p>
+                        .titi {
+                            font-size: 18px;
+                            font-family: Impact;
+                            color: #ff0000;
+                        }
+                    </style>
+                    <p>
+                        On utilise le plus souvent la balise <code>&lt;span&gt;</code>, qui recevra la classe pour
+                        changer
+                        <span class="danger">l'apparence du texte</span>.
+                    </p>
+                    <p>
+                        <code>&lt;span&gt;</code> ne sert qu'à faire ressortir visuellement du texte, pour avoir un
+                        impact
+                        sur le <span class="titi">référencement</span> il existe d'autre balises.
+                    </p>
+                    <h3>Le gras et l'italique</h3>
+                    <p>
+                        Pour mettre en gras ou en italique, il existe pour chacun des cas deux balises. Les balises qui
+                        ne
+                        servent qu'à attirer l'attention du lecteur sont &lt;b&gt; <b>pour le gras</b> et &lt;i&gt;
+                        <i>pour
+                            l'italique</i>.<br />
+                        Pour attirer l'attention du lecteur ET signifier une importance sémantique qui impacte le
+                        référencement, on utilisera &lt;strong&gt; <strong>pour le gras</strong> et l'importance
+                        sémantique
+                        sur la force du terme et &lt;em&gt; <em>pour l'italique</em> et ajouter de l'emphase à la
+                        sémantique
+                        du terme.
+                    </p>
+                    <h3>D'autres mise en forme de texte</h3>
+                    <p>
+                        A la base, le HTML servait principalement pour l'impression directe de son contenu, c'est pour
+                        cela
+                        qu'il est toujours possible de <u>souligner</u>, <s>de biffer</s> ou de <mark>surligner au fluo
+                            du
+                            texte</mark>.<br />
+                        On ne souligne jamais en HTML, car les utilisateurs pourraient pense qu'il s'agit d'un
+                        hyperlien, et
+                        ils pourraient pense qu'il s'agit d'un lien cassé.
+                    </p>
+                    <p>
+                        Une surface de 45m<sup>2</sup><br />
+                        Un volume de 3m<sup>3</sup><br />
+                        De l'acide sulfurique en oxydo-réduction H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>&#x21CC;
+                    </p>
+                </article>
             </section>
         </section>
         <section>
@@ -409,8 +423,12 @@
                     <p>
                         le calcul des "boîtes" est en fait mis par défaut à la valeur "content-box"
                     </p>
-                    <div style="box-sizing: content-box;width: 200px;height: 200px;border: 1px solid black;padding: 10px;"></div>
-                    <div style="box-sizing: border-box;width: 200px;height: 200px;border: 1px solid black; padding: 10px;"></div>
+                    <div
+                        style="box-sizing: content-box;width: 200px;height: 200px;border: 1px solid black;padding: 10px;">
+                    </div>
+                    <div
+                        style="box-sizing: border-box;width: 200px;height: 200px;border: 1px solid black; padding: 10px;">
+                    </div>
                 </article>
             </section>
         </section>

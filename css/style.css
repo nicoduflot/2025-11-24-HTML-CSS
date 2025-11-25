@@ -157,8 +157,8 @@ ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des impor
     font-family: Arial, Helvetica, sans-serif;
     --site-title-font: Impact;
     --heading-font: Impact;
-    --site-font-size: 22px;
-    font-size: var(--site-font-size);
+    --site-font-size: 22px; 
+    font-size: var(--site-font-size); /* référence du 1rem */
 }
 
 /* Déclaration générales */
@@ -186,6 +186,23 @@ h2{
 
 /* déclaration selon la structure html de la page */
 
+body{
+    margin: 0;
+}
+
+body > header{
+    background-color: #333;
+    color: white;
+}
+
+body > header > *,
+body > nav > *,
+body > main > header,
+aside.toc, 
+main section header,
+main section article{
+    padding: 0.5rem;
+}
 
 
 /* déclaration spécifiques pour l'adaptatif */
