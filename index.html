@@ -54,7 +54,7 @@
                 <article>
                     <h4>Les paragraphes</h4>
                     <p>
-                        Les paragraphes séparent naturellement les blocs de texte en vertical, mais s'il y a besoin d'un
+                        Les paragraphes séparent <span class="danger">les blocs de texte en vertical</span>, mais s'il y a besoin d'un
                         retour chariot au sein d'un paragraphe :<br />
                         <code>&lt;p&gt;</code>. <br />
                         La balise <code>&lt;br /&gt;</code> permet donc un retour "à la ligne" dans un paragraphe.
@@ -169,18 +169,23 @@
                     <h4>Les citations</h4>
                     <blockquote>
                         <p>
-                            La balise <code>&lt;blockquote&gt;</code> met en exergue son contenu en ajoutant des marges extérieur à gauche et à droite.
+                            La balise <code>&lt;blockquote&gt;</code> met en exergue son contenu en ajoutant des marges
+                            extérieur à gauche et à droite.
                         </p>
                     </blockquote>
                     <p>
-                        Pour afficher une citation complète ( source, auteur, etc.) on va la compléter avec d'autres balise du même type.
+                        Pour afficher une citation complète ( source, auteur, etc.) on va la compléter avec d'autres
+                        balise du même type.
                     </p>
                     <blockquote>
                         <p>
-                            <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à outils de la communication.</q>
+                            <q cite="https://fr.wikiquote.org/wiki/Terry_Pratchett#Au_guet_!,_1989">Si les clichés
+                                deviennent des clichés, c'est qu'ils sont les marteaux et les tournevis dans la boîte à
+                                outils de la communication.</q>
                         </p>
                         <p>
-                            <cite>Au guet ! (1989), Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997  (ISBN 2-84172-045-4), p. 173</cite>
+                            <cite>Au guet ! (1989), Terry Pratchett (trad. Patrick Couton), éd. L'Atalante, 1997 (ISBN
+                                2-84172-045-4), p. 173</cite>
                         </p>
                     </blockquote>
                 </article>
@@ -290,6 +295,37 @@
                 <header>
                     <h3 id="balises-de-modification-de-texte">Balises de modification de texte</h3>
                 </header>
+                <h4>Taille, police et la couleur du texte</h4>
+                <p>
+                    Dans les premières version du HTYML, il existait la balise <code>&lt;font&gt;</code> qui permettait
+                    de changer <font size="4" face="Impact" color="red">la taille, la police et la couleur d'une section
+                        de texte</font>. Mais cette balise n'est plus dans les normes HTML, désormais pour ce genre de
+                    manipulation, on créera des classes CSS, qui seront utilisées ponctuellement pour décorer
+                    au besoin des section de texte.
+                </p>
+                <style>
+                    .danger{
+                        font-size: 18px;
+                        font-family: Impact;
+                        color:#ff0000;
+                    }
+                    .titi{
+                        font-size: 18px;
+                        font-family: Impact;
+                        color:#ff0000;
+                    }
+                </style>
+                <p>
+                    On utilise le plus souvent la balise <code>&lt;span&gt;</code>, qui recevra la classe pour changer <span class="danger">l'apparence du texte</span>.
+                </p>
+                <p>
+                    <code>&lt;span&gt;</code> ne sert qu'à faire ressortir visuellement du texte, pour avoir un impact sur le <span class="titi">référencement</span> il existe d'autre balises.
+                </p>
+                <h3>Le gras et l'italique</h3>
+                <p>
+                    Pour mettre en gras ou en italique, il existe pour chacun des cas deux balises. Les balises qui ne servent qu'à attirer l'attention du lecteur sont &lt;b&gt; <b>pour le gras</b> et &lt;i&gt; <i>pour l'italique</i>.<br />
+                    Pour attirer l'attention du lecteur ET signifier une importance sémantique qui impacte le référencement, on utilisera &lt;strong&gt; <strong>pour le gras</strong> et l'importance sémantique sur la force du terme et &lt;em&gt; <em>pour l'italique</em> et ajouter de l'emphase à la sémantique du terme.
+                </p>
             </section>
         </section>
         <section>
