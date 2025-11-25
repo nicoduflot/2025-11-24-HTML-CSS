@@ -1,10 +1,7 @@
 /*
 Commentaires en CSS
 Aucun impact sur la page liée
-*/
 
-
-/*
 CSS => Cascading Style Sheets (Feuilles de style en cascade)
 
 La cascade 
@@ -121,4 +118,53 @@ q:hover{
 
 quand un élément q est survolé, la police de caractère devient rouge et la couleur de fond passe au noir.
 
+:root 
+
+Un espace de déclaration de propriétés CSS, qui s'appliquent à tout le document, avant le CSS du navigateur
+
+il est possible de centraliser des comportements et des "standard" de style directement dans le root
+
+Comme en CSS on peux déclarer des variables sous la forme --nom-de-variable ou --variable, etc. il diveint facile de maîtriser la maintenance et les changements dans le css
+
 */
+
+/* 
+Import de feuillets CSS 
+ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des imports doivent être les première ligne de CSS que le navigateur va lire (commentaires non concernés)
+*/
+@import url('./toto.css');
+
+/* déclartion du root */
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    --site-title-font: Impact;
+    --heading-font: Impact;
+    --site-font-size: 22px;
+    font-size: var(--site-font-size);
+}
+
+/* Déclaration générales */
+
+h1, h2{
+    font-family: var(--heading-font);
+}
+
+h1{
+    font-size: calc( var(--site-font-size) *2.5 ) ;
+}
+h2{
+    font-size: calc( var(--site-font-size) *2 ) ;
+}
+
+/*  déclaration des classes CSS*/
+
+.site-title{
+    font-family: var(--site-title-font);
+}
+
+/* déclaration selon la structure html de la page */
+
+
+
+/* déclaration spécifiques pour l'adaptatif */
