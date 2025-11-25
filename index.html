@@ -492,7 +492,7 @@
                         on écrira :
 
                         */
-                        .exemple-position{
+                        .exemple-position {
                             width: 200px;
                             height: 200px;
                             border-width: 3px;
@@ -500,17 +500,17 @@
                             border-color: black;
                         }
 
-                        .carre-ex{
+                        .carre-ex {
                             width: 50px;
                             height: 50px;
                             opacity: 1;
                         }
 
-                        .carre-rouge{
+                        .carre-rouge {
                             background-color: darkred;
                         }
-                        
-                        .carre-vert{
+
+                        .carre-vert {
                             background-color: darkgreen;
                         }
                     </style>
@@ -518,6 +518,99 @@
                         <div class="carre-ex carre-rouge"></div>
                         <div class="carre-ex carre-vert"></div>
                     </div>
+                </article>
+                <article>
+                    <h3 id="le-css-adaptatif">Le CSS adaptatif</h3>
+                    <p>
+                        Le CSS dit adaptatif (ou plus communément appelé RWD - Responsive Web Design) permet d'adapter
+                        l'affichage d'un site sur selon l'appareil utilisé.
+                    </p>
+                    <p>
+                        Donc, un site s'affichant correctement sur smartphone (en prenant en compte la lisibilité et
+                        l'accessibilité) doit pouvoir s'adapter sous une forme différente sur des écrans plus grands
+                        (tablette ou PC)
+                    </p>
+                    <p>
+                        Pour ce faire, on va écrire dans le CSS des surcharges ou des nouvelles règles CSS quand la
+                        largeur
+                        de l'écran atteint ou dépasse une largeur définie, en utilisant les <code>media queries</code>
+                    </p>
+                    <h3>Les media-queries</h3>
+                    <p>
+                        Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre
+                        autres, à l'affichage du site sur l'appareil : largeur d'affichage (viewport), l'orientation
+                        (portrait ou paysage), etc.
+                    </p>
+                    <p>
+                        Il est recommandé d'écrire le CSS d'un site en smartphone-first. La plupart des visiteurs de
+                        site
+                        naviguent à l'aide d'un smartphone. De plus le CSS de base sans media-queries est déstiné
+                        uniquement
+                        à l'affichage sur smartphone. Cela permet d'écrire quasiement tout le CSS d'un site, les
+                        surcharges
+                        ou ajouts de CSS dans les media-queries ne représentant qu'une partie infime du fichier CSS
+                        total.
+                    </p>
+                    <p>
+                        Si on fait la mise en page en premier lieu pour un écran plus grand, les réécriture et surcharge
+                        de
+                        CSS seront beaucoup plus importante, ce qui génèrera un fichier CSS très gros et surtout très
+                        difficile à maintenir.
+                    </p>
+                    <h3>la propriété display</h3>
+                    <p>
+                        La propriété display permet de contrôler le mode d'affichage d'un élément sur la page et parfois
+                        même au sein d'un "flux" de texte, généralement dans un paragraphe.
+                    </p>
+                    <p>
+                        Les valeurs possibles (liste non exhaustive) :
+                    </p>
+                    <ul>
+                        <li>block : l'élément prend toute la largeur disponible et "repousse" les éléments (ou le flux
+                            dee
+                            données) au dessus (pour ce qui arrive avant) et en dessous (pour ce qui arrive après)</li>
+                        <li>inline : l'élément prend la largeur de son contenur et est intégré ans le flux de texte à la
+                            suite</li>
+                        <li>inline-block : completement semblable au inline, mais généralement utilisé sur des éléments
+                            ayant la proriété float d'activée, afin de les aligner côte à côte</li>
+                        <li>None : l'élément n'est tout simplement pas affiché à l'écran</li>
+                        <li>flex : permet d'utiliser les propriétés flexible CSS (principalement utilisées pour le CSS
+                            adaptatif) MAIS pour les élément &Agrave; l'intérieur</li>
+                        <li>grid : permet de configurer une disposition en grille, en configurant le nombre et l'espace
+                            pris
+                            par les colonne, la gestion automatique ou forcée des lignes, et l'espace a prévoir entre
+                            les
+                            éléments</li>
+                    </ul>
+                    <h4>la propriété float</h4>
+                    <p>
+                        Elle permet de faire "flotter" un élément sur la gauche ou sur la droite du parent où il a été déclaré
+                    </p>
+                    <div style="border: 1px solid black;">
+                        <div style="border: 1px solid black; padding: 0.25rem; width: 50px; float: left;">toto</div>
+                        <div style="border: 1px solid black; padding: 0.25rem; width: 50px; float: left;">toto</div>
+                        <div style="border: 1px solid black; padding: 0.25rem; width: 50px; float: left;">toto</div>
+                        <div style="border: 1px solid black; padding: 0.25rem; width: 50px; float: left;">toto</div>
+                        <div style="border: 1px solid black; padding: 0.25rem; width: 50px; float: left;">toto</div>
+                        <div style="border: 1px solid black; padding: 0.25rem; width: 50px; float: left;">toto</div>
+                        <div style="border: 1px solid black; padding: 0.25rem; width: 50px; float: left;">toto</div>
+                        <div style="border: 1px solid black; padding: 0.25rem; width: 50px; float: left;">toto</div>
+                        <div style="clear: both;"></div>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio sapiente molestias, dolor quos repellendus corrupti fuga sunt, itaque ipsam praesentium deleniti ducimus eos facilis? Inventore aspernatur eligendi dignissimos voluptates error.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis voluptas ad fugit dignissimos, aperiam, cumque iure voluptate id tempora consectetur labore voluptatum at unde, ex tenetur rem eligendi culpa? Quae?
+                    </p>
+                    <img src="./images/y-so-serious-white.png" style="width: 200px; float: left; border: 1px solid black">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi reprehenderit aut quisquam perspiciatis natus magnam, illo minus porro in, atque ratione enim neque velit consequatur debitis, perferendis nam corporis sequi!
+                    </p>
+                    <div style="clear: both;"></div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae dolores fuga maiores. Ea, corporis tenetur. Ipsam, dolorum voluptatem? Sit odit magni dolor, eos officiis voluptates ad minima quidem praesentium harum?
+                    </p>
                 </article>
             </section>
         </section>
