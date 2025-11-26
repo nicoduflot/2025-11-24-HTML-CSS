@@ -1,0 +1,57 @@
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.img-fluid{
+    max-width: 100%;
+}
+
+.vignette-100, 
+.miniature-100, 
+.avatar-100{
+    width: 100px;
+    height: 100px;
+    object-position: center center;
+    background-color: var(--header-bg-color);
+}
+
+.vignette-100{
+    object-fit: cover;
+}
+
+.miniature-100{
+    object-fit: contain;
+}
+
+.elipse-200{
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.avatar-100{
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+figure{
+    background-color: var(--header-bg-color);
+    display: inline-block;
+    padding: var(--gouttiere);
+    border-radius: calc( var(--gouttiere) / 2 );
+}
+
+figure > * {
+    color: var(--header-color);
+}
+
+figcaption{
+    text-align: center;
+    padding-left: calc( var(--gouttiere) / 2 );
+    padding-right: calc( var(--gouttiere) / 2 );
+}
