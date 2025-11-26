@@ -292,6 +292,19 @@ la plupart des css adaptatifs reprennent ceux proposés par bootstrap
     .container{
         width: 720px;
     }
+
+    main section section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main section header{
+        width: 100%;
+    }
+
+    main section section article{
+        width: 50%;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -303,6 +316,10 @@ la plupart des css adaptatifs reprennent ceux proposés par bootstrap
 @media screen and (min-width: 1200px) {
     .container{
         width: 1140px;
+    }
+
+    main section section article{
+        width: calc( 100% / 3 );
     }
 }
 
