@@ -222,6 +222,12 @@ a:not(p a){
     border-radius: calc( var(--site-line-height) / 2 );
 }
 
+.container{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* déclaration selon la structure html de la page */
 
 body{
@@ -249,5 +255,59 @@ body > footer > *{
     padding: var(--gouttiere);
 }
 
-
 /* déclaration spécifiques pour l'adaptatif */
+
+@media print {
+    body > nav,
+    body > footer,
+    .go-top{
+        display: none;
+    }
+}
+
+/*
+les points de ruptures les plus utilisés en adaptatif
+
+la plupart des css adaptatifs reprennent ceux proposés par bootstrap
+
+|min-width (largeur de l'écran)  | largeur du contenu a "restreindre"|
+|--------------------------------|-----------------------------------|
+|smartphone < 576px              |   100% de l'espace disponible     |
+|small <= 576px                  |   540px de l'espace disponible    |
+|medium <= 768px                 |   720px de l'espace disponible    |
+|large <= 992px                  |   960px de l'espace disponible    |
+|extra-large <= 1200px           |   1140px de l'espace disponible   |
+|extra-extra-large <= 1400px     |   1320px de l'espace disponible   |
+|--------------------------------|-----------------------------------|
+
+*/
+
+@media screen and (min-width: 576px) {
+    .container{
+        width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container{
+        width: 720px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container{
+        width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container{
+        width: 1140px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container{
+        width: 1320px;
+    }
+}
