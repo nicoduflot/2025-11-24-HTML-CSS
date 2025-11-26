@@ -43,6 +43,9 @@
                     <li><a href="#balises-de-contenu-de-texte">Balises de contenu de texte</a></li>
                     <li><a href="#balises-de-modification-de-texte">Balises de modification de texte</a></li>
                     <li><a href="#mise-a-zero-du-css">Mise à zéro du CSS</a></li>
+                    <li><a href="#dimensions-web-et-css">Dimension web et CSS</a></li>
+                    <li><a href="#les-positions-en-css">Les positions CSS</a></li>
+                    <li><a href="#le-css-adaptatif">Le CSS adaptatif (RWD)</a></li>
                 </ul>
             </nav>
         </aside>
@@ -199,11 +202,11 @@
                         <caption>Exemple de tableau complet</caption>
                         <thead>
                             <tr>
-                                <th>Entête n°1</th>
-                                <th>Entête n°2</th>
-                                <th>Entête n°3</th>
-                                <th>Entête n°4</th>
-                                <th>Entête n°5</th>
+                                <th role="columnheader">Entête n°1</th>
+                                <th role="columnheader">Entête n°2</th>
+                                <th role="columnheader">Entête n°3</th>
+                                <th role="columnheader">Entête n°4</th>
+                                <th role="columnheader">Entête n°5</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -240,11 +243,11 @@
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>Entête n°1</th>
-                                <th>Entête n°2</th>
-                                <th>Entête n°3</th>
-                                <th>Entête n°4</th>
-                                <th>Entête n°5</th>
+                                <th role="columnheader">pied n°1</th>
+                                <th role="columnheader">pied n°2</th>
+                                <th role="columnheader">pied n°3</th>
+                                <th role="columnheader">pied n°4</th>
+                                <th role="columnheader">pied n°5</th>
                             </tr>
                         </tfoot>
                     </table>
@@ -253,14 +256,14 @@
                     </p>
                     <table border="1" cellspacing="0">
                         <tr style="background-color: white;">
-                            <th></th>
-                            <th>1</th>
-                            <th>2</th>
-                            <th>3</th>
-                            <th>4</th>
+                            <th role="columnheader"></th>
+                            <th role="columnheader">1</th>
+                            <th role="columnheader">2</th>
+                            <th role="columnheader">3</th>
+                            <th role="columnheader">4</th>
                         </tr>
                         <tr>
-                            <th>1</th>
+                            <th role="rowheader">1</th>
                             <td>Cellule</td>
                             <td>Cellule</td>
                             <td>Cellule</td>
@@ -272,21 +275,21 @@
                             <col span="2" style="background-color: bisque;" />
                         </colgroup>
                         <tr>
-                            <th>2</th>
+                            <th role="rowheader">2</th>
                             <td>Cellule</td>
                             <td>Cellule</td>
                             <td>Cellule</td>
                             <td>Cellule</td>
                         </tr>
                         <tr>
-                            <th>3</th>
+                            <th role="rowheader">3</th>
                             <td>Cellule</td>
                             <td>Cellule</td>
                             <td>Cellule</td>
                             <td>Cellule</td>
                         </tr>
                         <tr>
-                            <th>4</th>
+                            <th role="rowheader">4</th>
                             <td>Cellule</td>
                             <td>Cellule</td>
                             <td>Cellule</td>
@@ -304,7 +307,7 @@
                     <p>
                         Dans les premières version du HTML, il existait la balise <code>&lt;font&gt;</code> qui
                         permettait
-                        de changer <font size="4" face="Impact" color="red">la taille, la police et la couleur d'une
+                        de changer <font size="4" face="Impact" color="darkred">la taille, la police et la couleur d'une
                             section
                             de texte</font>. Mais cette balise n'est plus dans les normes HTML, désormais pour ce genre
                         de
@@ -315,13 +318,13 @@
                         .danger {
                             font-size: 18px;
                             font-family: Impact;
-                            color: #ff0000;
+                            color: darkred;
                         }
 
                         .titi {
                             font-size: 18px;
                             font-family: Impact;
-                            color: #ff0000;
+                            color: darkred;
                         }
                     </style>
                     <p>
@@ -431,7 +434,7 @@
                     </div>
                 </article>
                 <article>
-                    <h3 id="les-position-en-css">Les positions en CSS</h3>
+                    <h3 id="les-positions-en-css">Les positions en CSS</h3>
                     <p>
                         La propriété position permet d'afficher à l'écran des éléments ailleurs que là où ils sont
                         déclarés
@@ -608,7 +611,7 @@
                         dignissimos, aperiam, cumque iure voluptate id tempora consectetur labore voluptatum at unde, ex
                         tenetur rem eligendi culpa? Quae?
                     </p>
-                    <img src="./images/y-so-serious-white.png"
+                    <img src="./images/y-so-serious-white.png" alt="" 
                         style="width: 200px; float: left; border: 1px solid black">
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi reprehenderit aut quisquam
@@ -812,9 +815,10 @@
     </main>
     <footer>
         <div>
-
+            &copy; DAWAN - Oct - 2025
         </div>
     </footer>
+
 </body>
 
 </html>

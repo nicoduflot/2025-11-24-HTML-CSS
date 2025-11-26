@@ -158,7 +158,15 @@ ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des impor
     --site-title-font: Impact;
     --heading-font: Impact;
     --site-font-size: 1.15rem;
+    --line-height-factor: 1.4;
+    /* ce facteur est le taux qui permet d'avoir une hauteur de ligne harmonieuse avec la hauteur de police de base */
+    --site-line-height: calc( var(--site-font-size) * var(--line-height-factor) );
+    /* la hauteur de ligne est calculé par rraport à la taille de la police multipliée par le taux de hauteur de ligne pour rendre le texte accessible */
+    line-height: var(--site-line-height);
     font-size: var(--site-font-size); /* référence du 1rem */
+    --gouttiere: 0.5rem;
+    --header-bg-color: #333;
+    --header-color: white;
 }
 
 /* Déclaration générales */
@@ -171,11 +179,19 @@ h1, h2{
     font-family: var(--heading-font);
 }
 
+h1, h2, h3, h4, h5, h6, ul{
+    margin: 0;
+}
+
 h1{
     font-size: calc( var(--site-font-size) *2.5 ) ;
+    /* on ajoute 150% de la taille de base des polices pour titre 1 */
+    line-height: calc( ( var(--site-font-size) *2.5 ) * var(--line-height-factor) );
+    /* on calcul la hauteur de ligne par rapport à la taille de lapolice h1 qu'on multiplie par le taux appliqué à la hauteur de ligne pour le site */
 }
 h2{
     font-size: calc( var(--site-font-size) *2 ) ;
+    line-height: calc( ( var(--site-font-size) *2 ) * var(--line-height-factor) );
 }
 
 /*  déclaration des classes CSS*/
@@ -190,9 +206,15 @@ body{
     margin: 0;
 }
 
-body > header{
-    background-color: #333;
-    color: white;
+body > header,
+body > nav, 
+body > footer{
+    background-color: var(--header-bg-color);
+    color: var(--header-color);
+}
+
+body > nav a{
+    color: var(--header-color);
 }
 
 body > header > *,
@@ -200,8 +222,9 @@ body > nav > *,
 body > main > header,
 aside.toc, 
 main section header,
-main section article{
-    padding: 0.5rem;
+main section article,
+body > footer > *{
+    padding: var(--gouttiere);
 }
 
 
