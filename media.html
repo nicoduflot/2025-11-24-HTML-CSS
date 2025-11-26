@@ -47,6 +47,9 @@
                 <ul>
                     <li><a href="#les-images">Les images</a></li>
                     <li><a href="#l-audio">L'audio</a></li>
+                    <li><a href="#la-video">La vidéo</a></li>
+                    <li><a href="#les-images-embarquees">Les images embarquées</a></li>
+                    <li><a href="#les-videos-embarquees">Les vidéos embarquées</a></li>
                 </ul>
             </nav>
         </aside>
@@ -154,6 +157,11 @@
                         </figcaption>
                     </figure>
                 </article>
+            </section>
+            <section>
+                <header>
+                    <h3 id="la-video">La vidéo</h3>
+                </header>
                 <article>
                     <h4>La balise vidéo</h4>
                     <p>
@@ -169,8 +177,21 @@
                         </figcaption>
                     </figure>
                     <p>
-                        Exercice : recréer la figure vidéo avec le lecteur poour les deux vidéos nommées "Big_Buck_Bunny_360_10s_1MB.mp4" et "Big_Buck_Bunny_360_10s_1MB.webm". Utilisez l'id "bunny" pour l'élément vidéo.
+                        Exercice : recréer la figure vidéo avec le lecteur poour les deux vidéos nommées
+                        "Big_Buck_Bunny_360_10s_1MB.mp4" et "Big_Buck_Bunny_360_10s_1MB.webm". Utilisez l'id "bunny"
+                        pour l'élément vidéo.
                     </p>
+                    <figure class="player">
+                        <video class="img-fluid" muted controls id="bunny">
+                            <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                            <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                        </video>
+                        <figcaption>
+                            <button onclick="playMedia('bunny')" class="play">Lire</button>
+                            <button onclick="pauseMedia('bunny')" class="pause">Pause</button>
+                            <button onclick="stopMedia('bunny')" class="stop">Stop</button>
+                        </figcaption>
+                    </figure>
                 </article>
             </section>
         </section>
@@ -180,11 +201,68 @@
             </header>
             <section>
                 <header>
-                    <h3 id=""></h3>
+                    <h3 id="les-images-embarquees">Les images embarquées</h3>
                 </header>
                 <article>
-                    <h4></h4>
+                    <h4>Images embarquées : provenance extérieure</h4>
+                    <p>
+                        "embarquer" un média signifie que le media n'est pas hébergé sur le site que l'on visite mais
+                        sur un site ou hébergement spécialisé pour ce type de media.
+                    </p>
+                    <p>
+                        Pour les images, certains fora ou réseaux sociaux ne proposent pas directement le téléversement
+                        de fichiers dans les publications des utilisateurs, alors on se tourne vers un hébergeur
+                        multimédia sur lequel on téléverse les media que l'on "embarque" ensuite sur les publication
+                        précédemment citées.
+                    </p>
+                    <figure class="media-legend">
+                        <div>
+                            <a data-flickr-embed="true"
+                                href="https://www.flickr.com/photos/21117717@N07/5039027434/in/dateposted-public/"
+                                title="Apocalypse car"><img
+                                    src="https://live.staticflickr.com/4105/5039027434_8604cc467c_n.jpg"
+                                    class="img-fluid" alt="Apocalypse car" /></a>
+                            <script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+                        </div>
+                    </figure>
+                    <figure class="media-legend">
+                        <div>
+                            <img src="https://live.staticflickr.com/4105/5039027434_8604cc467c_n.jpg"
+                                class="img-fluid" />
+                        </div>
+                    </figure>
                 </article>
+                <section>
+                    <header>
+                        <h3 id="les-videos-embarquees">Les vidéos embarquées</h3>
+                    </header>
+                    <article>
+                        <h4>L'iframe</h4>
+                        <p>
+                            L'élément iframe permet d'inserrer une page internet dans le document, mais pas que, il est possible d'inserrer d'autres types de fichiers, par exemple des pdf ou directement des fichiers vidéos, sons, etc.
+                        </p>
+                        <p>
+                            L'iframe avait un ancètre, la combinaison frameset et frame.
+                        </p>
+                        <p>
+                            Voir un <a href="./frameset.html" title="exemple de frame et frameset">exemple</a>
+                        </p>
+                        <p>
+                            Exemple d'iframe
+                        </p>
+                        <ul>
+                            <li><a href="./documents/A4-portrait-hex-0.5-inches-paper.pdf" target="documents">pdf a4 portrait</a></li>
+                            <li><a href="./documents/books.xml" target="documents">books xml</a></li>
+                            <li><a href="./documents/PP3.pdf" target="documents">pdf PP3</a></li>
+                            <li><a href="./media/video/Fallout-4-Launch-Trailer.mp4" target="documents">trailer fallout</a></li>
+                        </ul>
+                        <iframe name="documents" src="./exercice.html" width="100%" height="300">
+                            <p>
+                                Votre navigateur ne supporte pas les cadres de page (iframe)
+                            </p>
+                        </iframe>
+                    </article>
+                </section>
             </section>
         </section>
     </main>
