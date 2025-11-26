@@ -39,19 +39,34 @@
     border-radius: 50%;
 }
 
-figure{
+figure.media-legend{
     background-color: var(--header-bg-color);
     display: inline-block;
     padding: var(--gouttiere);
     border-radius: calc( var(--gouttiere) / 2 );
 }
 
-figure > * {
+figure.media-legend > div{
+    display: table;
+    margin: 0 auto;
+}
+
+figure.media-legend > * {
     color: var(--header-color);
 }
 
-figcaption{
+.media-legend figcaption{
+    display: table-caption;
+    caption-side: bottom;
     text-align: center;
     padding-left: calc( var(--gouttiere) / 2 );
     padding-right: calc( var(--gouttiere) / 2 );
+}
+
+figure.player{
+    margin: var(--gouttiere) 0;
+}
+
+video{
+    background-color: var(--header-bg-color);
 }

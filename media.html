@@ -8,6 +8,11 @@
     <!-- Commentaire en HTML -->
     <!-- C'est aussi dans <head> que l'on met les appels vers les fichiers CSS et les scripst javascript -->
     <link rel="stylesheet" href="./css/style.css" />
+    <script>
+        function playMedia(idCible) { document.getElementById(idCible).play(); }
+        function pauseMedia(idCible) { document.getElementById(idCible).pause() }
+        function stopMedia(idCible) { document.getElementById(idCible).pause(); document.getElementById(idCible).currentTime = 0 }
+    </script>
 </head>
 
 <body id="top">
@@ -41,6 +46,7 @@
             <nav>
                 <ul>
                     <li><a href="#les-images">Les images</a></li>
+                    <li><a href="#l-audio">L'audio</a></li>
                 </ul>
             </nav>
         </aside>
@@ -59,14 +65,20 @@
                     <h4>img</h4>
                     <p>
                         img est une balise qui une fois écrite, va aller chercher l'image source et l'afficher à sa
-                        place. Si rien d'autre n'est précisé, l'image s'affiche à sa taille originale. Si on change, par exemple, sa largeur, la hauteur garde le ratio (l'homothétie, le rapport hauteur / largeur)
+                        place. Si rien d'autre n'est précisé, l'image s'affiche à sa taille originale. Si on change, par
+                        exemple, sa largeur, la hauteur garde le ratio (l'homothétie, le rapport hauteur / largeur)
                     </p>
                     <p>
-                        Une image est en display inline, c'est à dire que si on l'intègre à l'intérieur d'un paragraphe <img loading="lazy" src="./images/james-white-composite-400w.png" alt="" class="left img-fluid" /> , le texte se placera à la gauche et à la droite de l'image : elle est intégrée au "flux" du texte.
+                        Une image est en display inline, c'est à dire que si on l'intègre à l'intérieur d'un paragraphe
+                        <img loading="lazy" src="./images/james-white-composite-400w.png" alt=""
+                            class="left img-fluid" /> , le texte se placera à la gauche et à la droite de l'image : elle
+                        est intégrée au "flux" du texte.
                     </p>
                     <div style="clear: both;"></div>
                     <p>
-                        Il est possible d'imposer une largeur et une hauteur à une image, mais il faudra utiliser une classe css dans laquelle on précise que l'objet (ici le flux de l'image) "couvre" l'espace proposé.
+                        Il est possible d'imposer une largeur et une hauteur à une image, mais il faudra utiliser une
+                        classe css dans laquelle on précise que l'objet (ici le flux de l'image) "couvre" l'espace
+                        proposé.
                     </p>
                     <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" alt="" class="vignette-100" />
                     <img src="./images/synthwave-vibe-james-white-signalnoise-w400.png" alt="" class="vignette-100" />
@@ -79,18 +91,86 @@
                 <article>
                     <h4>Figure</h4>
                     <p>
-                        Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement et l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter une légende, avec la balise figcaption.
+                        Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement
+                        et l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter
+                        une légende, avec la balise figcaption.
                     </p>
-                    <figure>
-                        <img loading="lazy" src="./images/synthwave-vibe-james-white-signalnoise-w400.png" class="img-fluid" alt="Illustration d'une moto et son motard avec un soleil couchant dans le style graphique synthwave" />
-                        <figcaption>
-                            Pochette d'un album de musique Synthwave.
-                        </figcaption>
+                    <figure class="media-legend">
+                        <div>
+                            <img loading="lazy" src="./images/synthwave-vibe-james-white-signalnoise-w400.png"
+                                class="img-fluid"
+                                alt="Illustration d'une moto et son motard avec un soleil couchant dans le style graphique synthwave" />
+                            <figcaption>
+                                Pochette d'un album de musique Synthwave. Texte supplémentaire.
+                            </figcaption>
+                        </div>
                     </figure>
                 </article>
                 <article>
                     <h4>picture</h4>
-
+                    <p>
+                        La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible
+                        autour de l'image affichée, on peut sélectionner la même image dans des formats différents.
+                    </p>
+                    <figure class="media-legend">
+                        <div>
+                            <picture>
+                                <source srcset="./images/doc-signal-394w.png" media="(min-width: 500px)" />
+                                <source srcset="./images/doc-signal-250w.png" media="(min-width: 400px)" />
+                                <img loading="lazy" src="./images/doc-signal-200w.png"
+                                    alt="portrait d'une personne en style synthwave" class="img-fluid" />
+                            </picture>
+                            <figcaption>
+                                Doc Brown par James White
+                            </figcaption>
+                        </div>
+                    </figure>
+                </article>
+            </section>
+            <section>
+                <header>
+                    <h3 id="l-audio">L'audio</h3>
+                </header>
+                <article>
+                    <h4>La balise audio</h4>
+                    <p>
+                        Pour mettre à disposition un fichier audio sur un site, on utlise la balise audio.
+                        Cette balise peut soit appeler un seul fichier, ou utiliser aussi la balise source.
+                        Utiliser plusieurs sources permet de s'adapter à la configuration de l'utilisateur. Un appareil,
+                        pour lire un fichier audio (ou vidéo) doit posséder les bon codecs. Si je met a disposition un
+                        fichier avec une extension que l'appareil ne connaît pas, j'aurais une erreur. Si je propose le
+                        même son dans des formats différents avec source, l'appareil lancera le premier fichier qu'il
+                        est capable de lire.
+                    </p>
+                    <figure class="player">
+                        <audio controls id="diablo">
+                            <source src="./media/audio/diablo_town.ogg" type="audio/ogg" />
+                            <source src="./media/audio/diablo_town.mp3" type="audio/mp3" />
+                        </audio>
+                        <figcaption>
+                            <button onclick="playMedia('diablo')" class="play">Lire</button>
+                            <button onclick="pauseMedia('diablo')" class="pause">Pause</button>
+                            <button onclick="stopMedia('diablo')" class="stop">Stop</button>
+                        </figcaption>
+                    </figure>
+                </article>
+                <article>
+                    <h4>La balise vidéo</h4>
+                    <p>
+                        La balise video se comporte comme la balise audio avec quelques attributs supplémentaires
+                    </p>
+                    <figure class="player">
+                        <video class="img-fluid" muted controls id="fallout"
+                            src="./media/video/Fallout-4-Launch-Trailer.mp4"></video>
+                        <figcaption>
+                            <button onclick="playMedia('fallout')" class="play">Lire</button>
+                            <button onclick="pauseMedia('fallout')" class="pause">Pause</button>
+                            <button onclick="stopMedia('fallout')" class="stop">Stop</button>
+                        </figcaption>
+                    </figure>
+                    <p>
+                        Exercice : recréer la figure vidéo avec le lecteur poour les deux vidéos nommées "Big_Buck_Bunny_360_10s_1MB.mp4" et "Big_Buck_Bunny_360_10s_1MB.webm". Utilisez l'id "bunny" pour l'élément vidéo.
+                    </p>
                 </article>
             </section>
         </section>
