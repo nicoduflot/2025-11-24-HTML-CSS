@@ -294,15 +294,15 @@ les points de ruptures les plus utilisés en adaptatif
 
 la plupart des css adaptatifs reprennent ceux proposés par bootstrap
 
-|min-width (largeur de l'écran)  | largeur du contenu a "restreindre"|
-|--------------------------------|-----------------------------------|
-|smartphone < 576px              |   100% de l'espace disponible     |
-|small <= 576px                  |   540px de l'espace disponible    |
-|medium <= 768px                 |   720px de l'espace disponible    |
-|large <= 992px                  |   960px de l'espace disponible    |
-|extra-large <= 1200px           |   1140px de l'espace disponible   |
-|extra-extra-large <= 1400px     |   1320px de l'espace disponible   |
-|--------------------------------|-----------------------------------|
+|min-width (largeur de l'écran)     | largeur du contenu a "restreindre"|
+|-----------------------------------|-----------------------------------|
+|smartphone < 576px                 |   100% de l'espace disponible     |
+|small <= 576px => sm               |   540px de l'espace disponible    |
+|medium <= 768px  => md             |   720px de l'espace disponible    |
+|large <= 992px   => lg             |   960px de l'espace disponible    |
+|extra-large <= 1200px => xl        |   1140px de l'espace disponible   |
+|extra-extra-large <= 1400px => xxl |   1320px de l'espace disponible   |
+|-----------------------------------|-----------------------------------|
 
 */
 
@@ -328,6 +328,10 @@ la plupart des css adaptatifs reprennent ceux proposés par bootstrap
         padding-left: var(--gouttiere);
         padding-right: var(--gouttiere);
     }
+
+    .w-sm-100{
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -347,11 +351,19 @@ la plupart des css adaptatifs reprennent ceux proposés par bootstrap
     main section section article{
         width: 50%;
     }
+
+    .w-md-100{
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 992px) {
     .container{
         width: 960px;
+    }
+
+    .w-lg-100{
+        width: 100%;
     }
 }
 
@@ -363,10 +375,19 @@ la plupart des css adaptatifs reprennent ceux proposés par bootstrap
     main section section article{
         width: calc( 100% / 3 );
     }
+
+    .w-xl-100{
+        width: 100%;
+    }
+    
 }
 
 @media screen and (min-width: 1400px) {
     .container{
         width: 1320px;
+    }
+
+    .w-xxl-100{
+        width: 100%;
     }
 }
