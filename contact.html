@@ -141,14 +141,14 @@
                                 <label for="email">Email : </label> 
                                 <input type="email" name="email" id="email" required aria-describedby="info-email" placeholder="Entrez email de contact" pattern="^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,15}$" />
                             </p>
-                            <div id="info-email" class="message message-info">
+                            <div id="info-email" class="message message-success">
                                 Veuillez entrer votre email principal, ce champ est obligatoire
                             </div>
                             <p>
                                 <label for="age-legal">Votre âge : </label> 
                                 <input type="number" name="age-legal" id="age-legal" aria-describedby="info-age-legal" min="13" max="99" value="13" />
                             </p>
-                            <div id="info-age-legal" class="message message-info">
+                            <div id="info-age-legal" class="message message-warning">
                                 Veuillez indiquez votre âge, l'age légal minimum pour nous faire une demande et de 13 ans.
                             </div>
                         </fieldset>
@@ -172,7 +172,7 @@
                                     </optgroup>
                                 </select>
                             </p>
-                            <div id="type-demande" class="message message-info">
+                            <div id="type-demande" class="message message-danger">
                                 Veuillez sélectionner le type de demande, ce champ est obligatoire
                             </div>
                             <p>
@@ -242,6 +242,10 @@
                             <button class="button button-danger" type="button">Associer une iteraction utilisateur</button>
                         </p>
                     </form>
+                    <h4>Exercice</h4>
+                    <p>
+                        Appliquer les couleurs, la bordure, le bg sur les classes button et button-success etc...
+                    </p>
                 </article>
             </section>
         </section>

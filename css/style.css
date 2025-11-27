@@ -269,12 +269,12 @@ a:not(p a){
     content: '\F430';
 }
 
-.message-succes{
+.message-success{
     background-color: var(--success-bg-color);
     border-color: var(--success-border-color);
 }
 
-.message-succes::before{
+.message-success::before{
     content: '\F26A';
 }
 
