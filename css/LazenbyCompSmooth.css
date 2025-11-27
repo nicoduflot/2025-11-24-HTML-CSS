@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'LazenbyCompSmooth';
+    src: url('fonts/LazenbyCompSmooth.eot');
+    src: url('fonts/LazenbyCompSmooth.eot') format('embedded-opentype'),
+         url('fonts/LazenbyCompSmooth.woff2') format('woff2'),
+         url('fonts/LazenbyCompSmooth.woff') format('woff'),
+         url('fonts/LazenbyCompSmooth.ttf') format('truetype'),
+         url('fonts/LazenbyCompSmooth.svg#LazenbyCompSmooth') format('svg');
+}

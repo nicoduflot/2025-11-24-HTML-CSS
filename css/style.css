@@ -152,13 +152,15 @@ ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des impor
 @import url('./media.css');
 @import url('./contact.css');
 @import url('./bootstrap-icons.css');
+@import url('./LazenbyCompSmooth.css');
+@import url('./roboto.css');
 
 /* déclartion du root */
 
 :root{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
-    --site-title-font: Impact;
+    --site-title-font: 'LazenbyCompSmooth';
     --heading-font: Impact;
     --site-font-size: 1.15rem;
     --line-height-factor: 1.4;
