@@ -169,6 +169,8 @@ ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des impor
     --gouttiere: 0.5rem;
     --header-bg-color: #333;
     --header-color: white;
+    --danger-color: #f1aeb5;
+    --success-color: #a3cfbb;
 }
 
 /* Déclaration générales */
