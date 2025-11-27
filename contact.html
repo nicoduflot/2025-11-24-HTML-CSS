@@ -203,9 +203,43 @@
                             <div id="info-diff" class="message message-info">
                                 Veuillez indiquez le type de diffusion souhaitée, si aucune n'est cochée un commercial vous contactera.
                             </div>
+                            <p>
+                                <input type="range" id="range" name="range" min="0" max="10" step="0.5" value="5" /><span id="value-range">5</span>
+                                <script>
+                                    /* On récupère l'élément range dans une constante */
+                                    const range = document.getElementById('range');
+                                    /* On récupère l'élément value-range (qui affiche la valeur actuelle du range) dans une constante */
+                                    const rangeValue = document.getElementById('value-range');
+                                    /* on surveille le changement de valeur du range */
+                                    range.addEventListener('change', function(){
+                                        /* quand la valeur change, on remplce le HTML à l'intérieur du span par la valeur du range */
+                                        rangeValue.innerHTML = range.value;
+                                    });
+                                </script>
+                            </p>
+                            <p>
+                                <input type="color" id="color" name="color"/><span id="value-color"></span>
+                                <script>
+                                    /* On récupère l'élément color dans une constante */
+                                    const color = document.getElementById('color');
+                                    /* On récupère l'élément value-color (qui affiche la valeur actuelle du color) dans une constante */
+                                    const colorValue = document.getElementById('value-color');
+                                    /* on surveille le changement de valeur du color */
+                                    color.addEventListener('change', function(){
+                                        /* quand la valeur change, on remplce le HTML à l'intérieur du span par la valeur du color */
+                                        colorValue.innerHTML = color.value;
+                                    });
+                                </script>
+                            </p>
+                            <p>
+                                <label for="message">Votre message</label><br />
+                                <textarea name="message" id="message"></textarea>
+                            </p>
                         </fieldset>
                         <p>
-                            <button type="submit">Envoyer</button>
+                            <button class="button button-success" type="submit">Envoyer</button>
+                            <button class="button button-warning" type="reset">Effacer les données saisies</button>
+                            <button class="button button-danger" type="button">Associer une iteraction utilisateur</button>
                         </p>
                     </form>
                 </article>
