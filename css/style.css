@@ -255,6 +255,30 @@ body > footer > *{
     padding: var(--gouttiere);
 }
 
+body > nav[role="navigation"] ul{
+    list-style-type: none;
+    padding: 0;
+}
+body > nav[role="navigation"] ul li{
+    border-bottom: 1px solid var(--header-color);
+}
+
+body > nav[role="navigation"] ul li:first-of-type{
+    border-top: 1px solid var(--header-color);
+}
+
+body > nav[role="navigation"] ul a{
+    display: block;
+}
+
+body > nav[role="navigation"] ul a:hover,
+body > nav[role="navigation"] ul a:focus,
+body > nav[role="navigation"] ul a:focus-visible{
+    background-color: var(--header-color);
+    color: var(--header-bg-color);
+    outline: none;
+}
+
 /* déclaration spécifiques pour l'adaptatif */
 
 @media print {
@@ -285,6 +309,24 @@ la plupart des css adaptatifs reprennent ceux proposés par bootstrap
 @media screen and (min-width: 576px) {
     .container{
         width: 540px;
+    }
+
+    body > nav[role="navigation"] ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > nav[role="navigation"] ul li{
+        border-bottom: unset;
+    }
+
+    body > nav[role="navigation"] ul li:first-of-type{
+        border-top: unset;
+    }
+
+    body > nav[role="navigation"] ul a{
+        padding-left: var(--gouttiere);
+        padding-right: var(--gouttiere);
     }
 }
 
