@@ -169,15 +169,23 @@ ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des impor
     font-size: var(--site-font-size); /* référence du 1rem */
     --gouttiere: 0.5rem;
     --header-bg-color: #333;
+
     --header-color: white;
+    --light-bg-color: #ddd;
+    --dark-bg-color: #454545;
     --info-bg-color: #b4d0e8;
     --danger-bg-color: #f1aeb5;
     --success-bg-color: #a3cfbb;
     --warning-bg-color: #f1d3ae;
+
+    --light-border-color: #666;
+    --dark-border-color: black;
     --info-border-color: #1583e3;
     --danger-border-color: #ea2a3d;
     --success-border-color: #07ca73;
     --warning-border-color: #ec8a12;
+
+    --dark-color: white;
 }
 
 /* Déclaration générales */
@@ -207,6 +215,17 @@ h2{
 
 a:not(p a){
     text-decoration: none;
+}
+
+button:hover,
+button:focus,
+button:focus-visible,
+.button:hover,
+.button:focus,
+.button:focus-visible{
+    opacity: 0.7;
+    cursor: pointer;
+    outline: unset;
 }
 
 /*  déclaration des classes CSS*/
@@ -294,6 +313,53 @@ a:not(p a){
 
 .message-danger::before{
     content: '\F67B';
+}
+
+.button, button{
+    height: var(--site-line-height);
+    padding-left: var(--gouttiere);
+    padding-right: var(--gouttiere);
+    border-radius: var(--input-border-radius);
+    border-style: solid;
+    border-color: transparent;
+    background-color: transparent;
+    color:inherit;
+    font-size: 0.8rem;
+    text-decoration: none;
+    border-width: 2px;
+    padding-top: calc( var(--gouttiere) / 3 );
+    padding-bottom: calc( var(--gouttiere) / 3 );
+}
+
+.button, .button-light, button{
+    background-color: var(--light-bg-color);
+    border-color: var(--light-border-color);
+}
+
+.button-dark{
+    background-color: var(--dark-bg-color);
+    border-color: var(--dark-border-color);
+    color: var(--dark-color);
+}
+
+.button-info{
+    background-color: var(--info-bg-color);
+    border-color: var(--info-border-color);
+}
+
+.button-success{
+    background-color: var(--success-bg-color);
+    border-color: var(--success-border-color);
+}
+
+.button-warning{
+    background-color: var(--warning-bg-color);
+    border-color: var(--warning-border-color);
+}
+
+.button-danger{
+    background-color: var(--danger-bg-color);
+    border-color: var(--danger-border-color);
 }
 
 /* déclaration selon la structure html de la page */
