@@ -155,6 +155,7 @@ ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des impor
 @import url('./LazenbyCompSmooth.css');
 @import url('./roboto.css');
 @import url('./animations.css');
+@import url('./animate.css');
 
 /* déclartion du root */
 
@@ -406,6 +407,7 @@ body > nav[role="navigation"] ul li:first-of-type{
 
 body > nav[role="navigation"] ul a{
     display: block;
+    transition: background-color 0.5s linear 0.1s, color 0.5s linear 0.1s;
 }
 
 body > nav[role="navigation"] ul a:hover,

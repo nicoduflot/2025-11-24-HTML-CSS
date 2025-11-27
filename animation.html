@@ -55,22 +55,72 @@
             </header>
             <section>
                 <header>
-                    <h3 id="ready-made">Les animations "Ready-made"</h3>
+                    <h3 id="ready-made" class="animate__animated animate__bounce animate__infinite">Les animations
+                        "Ready-made"</h3>
                 </header>
                 <article class="w-sm-100">
-                    <h4>Animate CSS</h4>
+                    <h4 class="animate__animated animate__rubberBand" style="display: inline-block;">Animate CSS</h4>
+                    <p>
+                        Des bibliothèques d'animation sont disponible sur internet, il suffit la plupart du temps de récupérer un css, l'ajouter à la page et utiliser les classes proposée, évidement selon un ordre précis.
+                    </p>
+                    <p>
+                        <a href="https://animate.style/" target="_blank">L'exemple précédent utilise animate.css</a>
+                    </p>
+                    <p>
+                        <button id="btn-animation" class="button-dark">Faire bouger "coucou"</button>
+                    </p>
+                    <p id="animation-cible">
+                        Coucou !
+                    </p>
+                    <script>
+                        /* on récupère le bouton */
+                        const btnAnim = document.getElementById('btn-animation');
+                        /* on récupère le paragraphe qui doit s'animer */
+                        const pAnimate = document.getElementById('animation-cible');
+                        /* quand un clic est fait sur le bouton */
+                        btnAnim.addEventListener('click', function(){
+                            /* on ajoute les classe d'animation d'animate au paragraphe */
+                            pAnimate.classList.add('animate__animated', 'animate__bounce', 'animate__repeat-1');
+                            /* quand une animation se termine sur un élément, il renvoie l'événement 'animationend' */
+                            /* quand cet événement survient, alors */
+                            pAnimate.addEventListener('animationend', function(){
+                                /* on retire du paragraphe animé les classe d'animate */
+                                pAnimate.classList.remove('animate__animated', 'animate__bounce', 'animate__repeat-1');
+                            });
+                        });
+                    </script>
                 </article>
                 <header>
                     <h3 id="diy">Les animations "D.I.Y."</h3>
                 </header>
                 <article class="w-sm-100">
                     <h4>les transitions</h4>
+                    <p class="translation">
+                        Le principe des animations CSS sont, par exemple, de préparer l'élément à l'animation avec une transition, on programme la ou les animations et / ou transformations dans cette transition.
+                    </p>
+                    <p class="scale-border">
+                        Ensuite, sur le pseudo sélecteur (par exemple au survol :hover) décrire le contenu des transition et / ou transformations.
+                    </p>
+                    <p>
+                    on utilise soit la propriété raccourcie transition, qui peut être décomposée par :
+                </p>
+                <ul>
+                    <li>transition-property: la propriété CSS subissant la transition</li>
+                    <li>transition-duration: la durée de la transition en seconde</li>
+                    <li>transition-timing-function: la façon dont la transition se fait (le "mouvement" à l'écran)</li>
+                    <li>transition-delay: le délais d'attente avant le lancement de la transition</li>
+                </ul>
                 </article>
                 <header>
                     <h3 id="images-clefs">Les animation avec des images clefs</h3>
                 </header>
                 <article class="w-sm-100">
                     <h4>keyframes</h4>
+                    <div class="espace-animation">
+                        <div class="cercle-animation animation">
+                            <i class="bi bi-arrow-right-circle-fill"></i>
+                        </div>
+                    </div>
                 </article>
             </section>
         </section>

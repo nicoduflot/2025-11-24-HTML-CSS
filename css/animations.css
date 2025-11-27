@@ -1,0 +1,78 @@
+.translation{
+    /* on va "préparer" l'élément à subir une transition vers un autre état */
+    transition: transform 0.5s;
+}
+
+.translation:hover{
+    transform: translate(20px, -10px);
+}
+
+.scale-border{
+    transition: transform 2s ease, border 1s;
+    border: 0px dashed transparent;
+}
+
+.scale-border:hover{
+    transform: scale(1.1);
+    border: 2px dashed red;
+    background-color: var(--danger-bg-color);
+}
+
+.espace-animation{
+    width: 100%;
+    padding-bottom: 30%;
+    height: 0;
+    position: relative;
+}
+
+.cercle-animation{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: darkorange;
+    border-radius: 50%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--header-bg-color);
+}
+
+.animation{
+    /* description de l'animation */
+    /*
+    animation c'est une propriété raccourcie
+    animation-name              : nom de l'animation
+    animation-duration          : durée de l'animation
+    animation-timing-function   : la vitesse constante ou non de l'animation
+    animation-delay             : le délais avant que l'animation soit jouée
+    animation-iteration-count   : le nombre de fois que se joue l'animation
+    animation-direction         : le "sens" de l'animation (on commence par la première vers la dernière image clef ou l'inverse)
+    */
+    animation-name: fleche-qui-bouge;
+    animation-timing-function: ease;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+/* Il faut maintenant définir les images clefs de l'animation */
+
+@keyframes fleche-qui-bouge {
+    0%{
+        left: 0%;
+        top: 25%;
+        transform: rotate(0deg);
+    }
+    20%{
+        top: 0%;
+    }
+    50%{
+        left: 50%;
+        top: 25%;
+        transform: rotate(360deg);
+    }
+    100%{
+        left: 0%;
+        top: 25%;
+    }
+}
