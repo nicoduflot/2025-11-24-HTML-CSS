@@ -154,6 +154,7 @@ ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des impor
 @import url('./bootstrap-icons.css');
 @import url('./LazenbyCompSmooth.css');
 @import url('./roboto.css');
+@import url('./animations.css');
 
 /* déclartion du root */
 
