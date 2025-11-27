@@ -78,11 +78,11 @@ form textarea{
 input:invalid,
 form textarea:invalid,
 select:invalid{
-    border-color: var(--danger-color);
+    border-color: var(--danger-bg-color);
 }
 
 input:valid,
 form textarea:valid,
 select:valid{
-    border-color: var(--success-color);
+    border-color: var(--success-bg-color);
 }

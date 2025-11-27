@@ -151,6 +151,7 @@ ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des impor
 */
 @import url('./media.css');
 @import url('./contact.css');
+@import url('./bootstrap-icons.css');
 
 /* déclartion du root */
 
@@ -169,8 +170,14 @@ ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des impor
     --gouttiere: 0.5rem;
     --header-bg-color: #333;
     --header-color: white;
-    --danger-color: #f1aeb5;
-    --success-color: #a3cfbb;
+    --info-bg-color: #b4d0e8;
+    --danger-bg-color: #f1aeb5;
+    --success-bg-color: #a3cfbb;
+    --warning-bg-color: #f1d3ae;
+    --info-border-color: #1583e3;
+    --danger-border-color: #ea2a3d;
+    --success-border-color: #07ca73;
+    --warning-border-color: #ec8a12;
 }
 
 /* Déclaration générales */
@@ -229,6 +236,64 @@ a:not(p a){
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.message{
+    margin: calc( var(--gouttiere) / 2 );
+    padding: calc( var(--gouttiere) / 2 );
+    border-radius: var(--gouttiere);
+    border-style: solid;
+    border-width: calc( var(--gouttiere) / 3 ) ;
+    border-color: transparent;
+}
+
+.message::before{
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.message-info{
+    background-color: var(--info-bg-color);
+    border-color: var(--info-border-color);
+}
+
+.message-info::before{
+    content: '\F430';
+}
+
+.message-succes{
+    background-color: var(--success-bg-color);
+    border-color: var(--success-border-color);
+}
+
+.message-succes::before{
+    content: '\F26A';
+}
+
+.message-warning{
+    background-color: var(--warning-bg-color);
+    border-color: var(--warning-border-color);
+}
+
+.message-warning::before{
+    content: '\F33A';
+}
+
+.message-danger{
+    background-color: var(--danger-bg-color);
+    border-color: var(--danger-border-color);
+}
+
+.message-danger::before{
+    content: '\F67B';
 }
 
 /* déclaration selon la structure html de la page */
