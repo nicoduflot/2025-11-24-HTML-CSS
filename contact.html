@@ -55,15 +55,66 @@
                 </header>
                 <article>
                     <h4>method</h4>
-                    
+                    <p>
+                        C'est la méthode d'envoi des informations du formulaire, il en existe deux :
+                    </p>
+                    <ul>
+                        <li>GET : les données sont envoyées associées à des
+                            noms de variables dans l'url de la page de traitement</li>
+                        <li>POST : Les données sont transmises en variables dans
+                            l'entête HTTP.
+                        </li>
+                    </ul>
+                    <p>
+                        Si la méthode n'est pas indiquée dans le formulaire,
+                        c'est GET qui sera utilisé par défaut
+                    </p>
                 </article>
                 <article>
                     <h4>Action</h4>
-                    
+                    <p>
+                        Indique l'url de la page de traitement des données envoyées par le formulaire.
+                        Si action n'est pas précisé, le formulaire considère que c'est la page où il
+                        se trouve qui sera la page de traitement.
+                    </p>
                 </article>
                 <article>
-                    <h4>Optionnel  enctype</h4>
-                    
+                    <h4>Optionnel enctype</h4>
+                    <p>
+                        Si votre formulaire doit téléverser des fichiers, il faut absolument ajouter l'attribut enctype
+                        avec la valeur enctype="multipart/form-data"
+                    </p>
+                    <p>
+                        De plus, à l'intérieur du formulaire, il faut ajouter un élément de formulaire "invisible" :
+                        <br />
+                        <code>&lt;input type="hidden" name="MAX_FILE_SIZE" value="30000000" /&gt;</code>
+                    </p>
+                    <p>
+                        value est une valeur en octets, la valeur de l'exemple précédent est un exemple.
+                    </p>
+                </article>
+                <article>
+                    <h4>submit</h4>
+                    <p>
+                        Pour pouvoir envoyer le formulaire, il faut qu'un bouton avec l'attribut type="submit" soit
+                        présent à l'intérieur. Le type submit déclenche l'envoi du formulaire dans lequel il se trouve.
+                    </p>
+                    <p>
+                        Par défaut, si un bouton sans type est présent dans un formulaire, si on clique dessus, le
+                        comportement par défaut sera d'envoyer le formulaire.
+                    </p>
+                </article>
+                <article>
+                    <h4>reset</h4>
+                    <p>
+                        Si dans un bouton du formulaire, l'attribut type="reset", en cliquant dessus, toutes les informations du formulaire dans lequel il se trouve, renseignées par l'utilisateur seront effacées.
+                    </p>
+                </article>
+                <article>
+                    <h4>button</h4>
+                    <p>
+                        Si dans un bouton du formulaire, l'attribut type="button", cela indique au navigateur que ce bouton sert à faire autre chose, généralement un comportement développé en javascript.
+                    </p>
                 </article>
             </section>
             <section>
@@ -71,8 +122,92 @@
                     <h3>Exemple de formulaire</h3>
                 </header>
                 <article class="w-md-100">
-                    <h4>demande de contact</h4>
-                    
+                    <h4>Demande de devis</h4>
+                    <form method="get" action="./contact.html">
+                        <fieldset>
+                            <legend>Informations personnelles</legend>
+                            <p>
+                                <label for="nom">Nom : </label> 
+                                <input type="text" name="nom" id="nom" required aria-describedby="info-nom" placeholder="Entrez votre nom de famille" autofocus />
+                                <!--
+                                <label id="tag-nom">Nom : </label> 
+                                <input type="text" name="nom" id="nom" required aria-describedby="info-nom" aria-labelled-by="tag-nom" />
+                                -->
+                            </p>
+                            <div id="info-nom" class="message message-info">
+                                Veuillez entrer votre nom de famille d'usage, ce champ est obligatoire
+                            </div>
+                            <p>
+                                <label for="email">Email : </label> 
+                                <input type="email" name="email" id="email" required aria-describedby="info-email" placeholder="Entrez email de contact" pattern="^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,15}$" />
+                            </p>
+                            <div id="info-email" class="message message-info">
+                                Veuillez entrer votre email principal, ce champ est obligatoire
+                            </div>
+                            <p>
+                                <label for="age-legal">Votre âge : </label> 
+                                <input type="number" name="age-legal" id="age-legal" aria-describedby="info-age-legal" min="13" max="99" value="13" />
+                            </p>
+                            <div id="info-age-legal" class="message message-info">
+                                Veuillez indiquez votre âge, l'age légal minimum pour nous faire une demande et de 13 ans.
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Votre demande</legend>
+                            <p>
+                                <label for="type-demande">Type de demande</label>
+                                <select name="type-demande" id="type-demande" required aria-describedby="info-type-demande">
+                                    <option aria-label="choix de demande" value="">Choisissez votre demande</option>
+                                    <optgroup label="Options unitaires">
+                                        <option aria-label="Option unitaire 1" value="1">Option n°1</option>
+                                        <option aria-label="Option unitaire 2" value="2">Option n°2</option>
+                                        <option aria-label="Option unitaire 3" value="3">Option n°3</option>
+                                        <option aria-label="Option unitaire 4" value="4">Option n°4</option>
+                                        <option aria-label="Option unitaire 5" value="5">Option n°5</option>
+                                    </optgroup>
+                                    <optgroup label="Regroupement d'options">
+                                        <option aria-label="Regroupement d'option sauf option 1" value="6">Toutes sauf option 1</option>
+                                        <option aria-label="Regroupement d'option sauf option 2" value="7">Toutes sauf option 2</option>
+                                        <option aria-label="Regroupement d'option sauf option 3" value="8">Toutes sauf option 3</option>
+                                    </optgroup>
+                                </select>
+                            </p>
+                            <div id="type-demande" class="message message-info">
+                                Veuillez sélectionner le type de demande, ce champ est obligatoire
+                            </div>
+                            <p>
+                                <label>Vous représentez :</label>
+                            </p>
+                            <p>
+                                <input type="radio" name="personne" id="physique" value="physique" checked aria-describedby="info-personne" />
+                                <label for="physique">Personne physique</label><br />
+                                <input type="radio" name="personne" id="morale" value="morale" aria-describedby="info-personne" />
+                                <label for="morale">Personne morale</label>
+                            </p>
+                            <div id="info-personne" class="message message-info">
+                                Veuillez indiquez si vous représentez une personne physique (un particulier) ou une personne morale (Une entreprise, une asso...).
+                            </div>
+                            <p>
+                                <label>Vos modèles de diffusion :</label>
+                            </p>
+                            <p>
+                                <input type="checkbox" name="diff-email" id="diff-email" value="email" aria-describedby="info-diff" />
+                                <label for="diff-email">Campagne d'emailing</label><br />
+                                <input type="checkbox" name="diff-tel" id="diff-tel" value="tel" aria-describedby="info-diff" />
+                                <label for="diff-tel">Télé-opérateurs</label><br />
+                                <input type="checkbox" name="diff-radio" id="diff-radio" value="radio" aria-describedby="info-diff" />
+                                <label for="diff-radio">Annonces radiophoniques</label><br />
+                                <input type="checkbox" name="diff-tv" id="diff-tv" value="tv" aria-describedby="info-diff" />
+                                <label for="diff-tv">Publicités télévisuelles</label>
+                            </p>
+                            <div id="info-diff" class="message message-info">
+                                Veuillez indiquez le type de diffusion souhaitée, si aucune n'est cochée un commercial vous contactera.
+                            </div>
+                        </fieldset>
+                        <p>
+                            <button type="submit">Envoyer</button>
+                        </p>
+                    </form>
                 </article>
             </section>
         </section>

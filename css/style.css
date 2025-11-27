@@ -150,6 +150,7 @@ Import de feuillets CSS
 ATTENTION : si on importe d'autre feuillets CSS, la déclaration du ou des imports doivent être les première ligne de CSS que le navigateur va lire (commentaires non concernés)
 */
 @import url('./media.css');
+@import url('./contact.css');
 
 /* déclartion du root */
 
@@ -282,10 +283,24 @@ body > nav[role="navigation"] ul a:focus-visible{
 /* déclaration spécifiques pour l'adaptatif */
 
 @media print {
+
+    :root{
+        text-align: justify;
+    }
+
     body > nav,
     body > footer,
     .go-top{
         display: none;
+    }
+
+    main section section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main section section article{
+        width: calc( 100% / 3 );
     }
 }
 
