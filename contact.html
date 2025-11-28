@@ -27,7 +27,8 @@
                     <a href="./media.html" target="_self" title="les media en HTML - CSS">Media</a>
                 </li>
                 <li>
-                    <a href="./contact.html" target="_self" title="Les formulaires en HTML - CSS" aria-current="page">Contact</a>
+                    <a href="./contact.html" target="_self" title="Les formulaires en HTML - CSS"
+                        aria-current="page">Contact</a>
                 </li>
                 <li>
                     <a href="./animation.html" target="_self" title="Les animations en HTML - CSS">Animations</a>
@@ -113,13 +114,16 @@
                 <article>
                     <h4>reset</h4>
                     <p>
-                        Si dans un bouton du formulaire, l'attribut type="reset", en cliquant dessus, toutes les informations du formulaire dans lequel il se trouve, renseignées par l'utilisateur seront effacées.
+                        Si dans un bouton du formulaire, l'attribut type="reset", en cliquant dessus, toutes les
+                        informations du formulaire dans lequel il se trouve, renseignées par l'utilisateur seront
+                        effacées.
                     </p>
                 </article>
                 <article>
                     <h4>button</h4>
                     <p>
-                        Si dans un bouton du formulaire, l'attribut type="button", cela indique au navigateur que ce bouton sert à faire autre chose, généralement un comportement développé en javascript.
+                        Si dans un bouton du formulaire, l'attribut type="button", cela indique au navigateur que ce
+                        bouton sert à faire autre chose, généralement un comportement développé en javascript.
                     </p>
                 </article>
             </section>
@@ -133,8 +137,9 @@
                         <fieldset>
                             <legend>Informations personnelles</legend>
                             <p>
-                                <label for="nom">Nom : </label> 
-                                <input type="text" name="nom" id="nom" required aria-describedby="info-nom" placeholder="Entrez votre nom de famille" autofocus />
+                                <label for="nom">Nom : </label>
+                                <input type="text" name="nom" id="nom" required aria-describedby="info-nom"
+                                    placeholder="Entrez votre nom de famille" autofocus />
                                 <!--
                                 <label id="tag-nom">Nom : </label> 
                                 <input type="text" name="nom" id="nom" required aria-describedby="info-nom" aria-labelled-by="tag-nom" />
@@ -144,25 +149,30 @@
                                 Veuillez entrer votre nom de famille d'usage, ce champ est obligatoire
                             </div>
                             <p>
-                                <label for="email">Email : </label> 
-                                <input type="email" name="email" id="email" required aria-describedby="info-email" placeholder="Entrez email de contact" pattern="^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,15}$" />
+                                <label for="email">Email : </label>
+                                <input type="email" name="email" id="email" required aria-describedby="info-email"
+                                    placeholder="Entrez email de contact"
+                                    pattern="^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,15}$" />
                             </p>
                             <div id="info-email" class="message message-success">
                                 Veuillez entrer votre email principal, ce champ est obligatoire
                             </div>
                             <p>
-                                <label for="age-legal">Votre âge : </label> 
-                                <input type="number" name="age-legal" id="age-legal" aria-describedby="info-age-legal" min="13" max="99" value="13" />
+                                <label for="age-legal">Votre âge : </label>
+                                <input type="number" name="age-legal" id="age-legal" aria-describedby="info-age-legal"
+                                    min="13" max="99" value="13" />
                             </p>
                             <div id="info-age-legal" class="message message-warning">
-                                Veuillez indiquez votre âge, l'age légal minimum pour nous faire une demande et de 13 ans.
+                                Veuillez indiquez votre âge, l'age légal minimum pour nous faire une demande et de 13
+                                ans.
                             </div>
                         </fieldset>
                         <fieldset>
                             <legend>Votre demande</legend>
                             <p>
                                 <label for="type-demande">Type de demande</label>
-                                <select name="type-demande" id="type-demande" required aria-describedby="info-type-demande">
+                                <select name="type-demande" id="type-demande" required
+                                    aria-describedby="info-type-demande">
                                     <option aria-label="choix de demande" value="">Choisissez votre demande</option>
                                     <optgroup label="Options unitaires">
                                         <option aria-label="Option unitaire 1" value="1">Option n°1</option>
@@ -172,9 +182,12 @@
                                         <option aria-label="Option unitaire 5" value="5">Option n°5</option>
                                     </optgroup>
                                     <optgroup label="Regroupement d'options">
-                                        <option aria-label="Regroupement d'option sauf option 1" value="6">Toutes sauf option 1</option>
-                                        <option aria-label="Regroupement d'option sauf option 2" value="7">Toutes sauf option 2</option>
-                                        <option aria-label="Regroupement d'option sauf option 3" value="8">Toutes sauf option 3</option>
+                                        <option aria-label="Regroupement d'option sauf option 1" value="6">Toutes sauf
+                                            option 1</option>
+                                        <option aria-label="Regroupement d'option sauf option 2" value="7">Toutes sauf
+                                            option 2</option>
+                                        <option aria-label="Regroupement d'option sauf option 3" value="8">Toutes sauf
+                                            option 3</option>
                                     </optgroup>
                                 </select>
                             </p>
@@ -185,53 +198,62 @@
                                 <label>Vous représentez :</label>
                             </p>
                             <p>
-                                <input type="radio" name="personne" id="physique" value="physique" checked aria-describedby="info-personne" />
+                                <input type="radio" name="personne" id="physique" value="physique" checked
+                                    aria-describedby="info-personne" />
                                 <label for="physique">Personne physique</label><br />
-                                <input type="radio" name="personne" id="morale" value="morale" aria-describedby="info-personne" />
+                                <input type="radio" name="personne" id="morale" value="morale"
+                                    aria-describedby="info-personne" />
                                 <label for="morale">Personne morale</label>
                             </p>
                             <div id="info-personne" class="message message-info">
-                                Veuillez indiquez si vous représentez une personne physique (un particulier) ou une personne morale (Une entreprise, une asso...).
+                                Veuillez indiquez si vous représentez une personne physique (un particulier) ou une
+                                personne morale (Une entreprise, une asso...).
                             </div>
                             <p>
                                 <label>Vos modèles de diffusion :</label>
                             </p>
                             <p>
-                                <input type="checkbox" name="diff-email" id="diff-email" value="email" aria-describedby="info-diff" />
+                                <input type="checkbox" name="diff-email" id="diff-email" value="email"
+                                    aria-describedby="info-diff" />
                                 <label for="diff-email">Campagne d'emailing</label><br />
-                                <input type="checkbox" name="diff-tel" id="diff-tel" value="tel" aria-describedby="info-diff" />
+                                <input type="checkbox" name="diff-tel" id="diff-tel" value="tel"
+                                    aria-describedby="info-diff" />
                                 <label for="diff-tel">Télé-opérateurs</label><br />
-                                <input type="checkbox" name="diff-radio" id="diff-radio" value="radio" aria-describedby="info-diff" />
+                                <input type="checkbox" name="diff-radio" id="diff-radio" value="radio"
+                                    aria-describedby="info-diff" />
                                 <label for="diff-radio">Annonces radiophoniques</label><br />
-                                <input type="checkbox" name="diff-tv" id="diff-tv" value="tv" aria-describedby="info-diff" />
+                                <input type="checkbox" name="diff-tv" id="diff-tv" value="tv"
+                                    aria-describedby="info-diff" />
                                 <label for="diff-tv">Publicités télévisuelles</label>
                             </p>
                             <div id="info-diff" class="message message-info">
-                                Veuillez indiquez le type de diffusion souhaitée, si aucune n'est cochée un commercial vous contactera.
+                                Veuillez indiquez le type de diffusion souhaitée, si aucune n'est cochée un commercial
+                                vous contactera.
                             </div>
                             <p>
-                                <input type="range" id="range" name="range" min="0" max="10" step="0.5" value="5" /><span id="value-range">5</span>
+                                <input type="range" id="range" name="range" min="0" max="10" step="0.5"
+                                    value="5" /><span id="value-range">5</span>
                                 <script>
                                     /* On récupère l'élément range dans une constante */
                                     const range = document.getElementById('range');
                                     /* On récupère l'élément value-range (qui affiche la valeur actuelle du range) dans une constante */
                                     const rangeValue = document.getElementById('value-range');
                                     /* on surveille le changement de valeur du range */
-                                    range.addEventListener('change', function(){
+                                    range.addEventListener('change', function () {
                                         /* quand la valeur change, on remplce le HTML à l'intérieur du span par la valeur du range */
                                         rangeValue.innerHTML = range.value;
                                     });
                                 </script>
                             </p>
                             <p>
-                                <input type="color" id="color" name="color"/><span id="value-color"></span>
+                                <input type="color" id="color" name="color" /><span id="value-color"></span>
                                 <script>
                                     /* On récupère l'élément color dans une constante */
                                     const color = document.getElementById('color');
                                     /* On récupère l'élément value-color (qui affiche la valeur actuelle du color) dans une constante */
                                     const colorValue = document.getElementById('value-color');
                                     /* on surveille le changement de valeur du color */
-                                    color.addEventListener('change', function(){
+                                    color.addEventListener('change', function () {
                                         /* quand la valeur change, on remplce le HTML à l'intérieur du span par la valeur du color */
                                         colorValue.innerHTML = color.value;
                                     });
@@ -253,13 +275,71 @@
                         </p>
                         <p>
                             <a href="./pages/homepage.html" target="_blank" class="button">Page test</a><br />
-                            <a href="./pages/homepage.html" target="_blank" class="button button-success">Page test</a><br />
+                            <a href="./pages/homepage.html" target="_blank" class="button button-success">Page
+                                test</a><br />
                         </p>
                     </form>
                     <h4>Exercice</h4>
                     <p>
                         Appliquer les couleurs, la bordure, le bg sur les classes button et button-success etc...
                     </p>
+                </article>
+            </section>
+            <section>
+                <header>
+                    <h3 id="des trucs en CSS">Mise à zéro du CSS</h3>
+                </header>
+                <article class="w-sm-100">
+                    <h4>Le svg</h4>
+                    <p>
+                        SVG : Scalable Vector Graphic
+                    </p>
+                    <p>
+                        Il est possible soit d'appeler un svg comme une image
+                    </p>
+                    <img src="./images/no-logo-2.svg" />
+                    <img src="./images/no-logo-2.svg" style="width: 50%;" />
+                    <p>
+                        Un svg ne subit pas d'effet "flou" quand il est affiché plus grand que sa taille d'origine, car
+                        il
+                        s'agit en fait d'un fichier XML contenant un ensemble de balises à l'intérieur d'une balise
+                        <code>svg</code> qui définissent les formes, les couleurs de remplissage et de contour.
+                    </p>
+                    <p>
+                        Il est possible de les faire soi-même.
+                    </p>
+                    <svg width="100%" height="10">
+                        <polyline points="0,0 5,0 300,5 5,10 0,10" style="stroke: transparent; fill:darkred" ></polyline>
+                    </svg>
+                    <p>
+                        Autre exemple :
+                    </p>
+                    <svg width="300" height="200">
+                        <rect width="100%" height="100%" fill="darkred" />
+                        <circle cx="100" cy="100" r="80" fill="darkgreen" />
+                        <circle cx="150" cy="100" r="80" fill="darkviolet" />
+                        <circle cx="200" cy="100" r="80" fill="goldenrod" />
+                        <text x="150" y="130" font-size="60px" fill="white" text-anchor="middle">COUCOU</text>
+                    </svg>
+                </article>
+                <article>
+                    <h4>Les propriété background</h4>
+                    <style>
+                        .badge{
+                            width: 200px;
+                            height: 200px;
+                            margin: var(--gouttiere);
+                            background: radial-gradient(rgba(0, 255, 0, 0) 50%, rgba(0, 0, 0, 0.8)) ,url('./images/pip-boy-boy.png');
+                            background-color: darkred;
+                            background-size: contain;
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            border-radius: 50%;
+                            border: 3px solid cadetblue;
+                            box-shadow: 0px 0px 5px 1px;
+                        }
+                    </style>
+                    <div class="badge"></div>
                 </article>
             </section>
         </section>
