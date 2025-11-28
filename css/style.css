@@ -234,6 +234,15 @@ button:focus-visible,
     outline: unset;
 }
 
+table{
+    border-collapse: collapse;
+}
+
+table td,
+table th{
+    border: 1px solid var(--header-bg-color);
+}
+
 /*  déclaration des classes CSS*/
 
 .site-title{

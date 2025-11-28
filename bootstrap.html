@@ -7,33 +7,34 @@
     <title>Introduction au HTML - CSS | Formation HTML - CSS</title>
     <!-- Commentaire en HTML -->
     <!-- C'est aussi dans <head> que l'on met les appels vers les fichiers CSS et les scripst javascript -->
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/bootstrap-icons.css" />
+    <script src="./js/bootstrap.bundle.js"></script>
 </head>
 
 <body id="top">
-    <header role="banner">
+    <header role="banner" data-bs-theme="dark" class="bg-dark text-white">
         <div class="container">
-            <span class="site-title">Formation HTML - CSS</span>
+            <span class="h1">Formation HTML - CSS</span>
         </div>
     </header>
-    <nav role="navigation">
+    <nav role="navigation" data-bs-theme="dark" class="bg-dark text-white">
         <div class="container">
-            <ul>
-                <li>
-                    <a href="./index.html" target="_self" title="Aller à l'introduction au HTML - CSS" aria-current="page">Introduction HTML
-                        - CSS</a>
+            <ul class="nav  nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html" target="_self" title="Aller à l'introduction au HTML - CSS">Introduction HTML - CSS</a>
                 </li>
-                <li>
-                    <a href="./media.html" target="_self" title="les media en HTML - CSS">Media</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="./media.html" target="_self" title="les media en HTML - CSS">Media</a>
                 </li>
-                <li>
-                    <a href="./contact.html" target="_self" title="Les formulaires en HTML - CSS">Contact</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="./contact.html" target="_self" title="Les formulaires en HTML - CSS">Contact</a>
                 </li>
-                <li>
-                    <a href="./animation.html" target="_self" title="Les animations en HTML - CSS">Animations</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="./animation.html" target="_self" title="Les animations en HTML - CSS">Animations</a>
                 </li>
-                <li>
-                    <a href="./bootstrap.html" target="_self" title="Le framework CSS Bootstrap">Bootstrap</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./bootstrap.html" target="_self" title="Le framework CSS Bootstrap">Bootstrap</a>
                 </li>
             </ul>
         </div>
@@ -59,58 +60,69 @@
             <header>
                 <h2>Bases en HTML</h2>
             </header>
-            <section>
+            <section class="row">
                 <header>
                     <h3 id="balises-de-contenu-de-texte">Balises de contenu de texte</h3>
                 </header>
-                <article>
-                    <h4>Les paragraphes</h4>
-                    <p>
-                        Les paragraphes séparent <span class="danger">les blocs de texte en vertical</span>, mais s'il y
-                        a besoin d'un
-                        retour chariot au sein d'un paragraphe :<br />
-                        <code>&lt;p&gt;</code>. <br />
-                        La balise <code>&lt;br /&gt;</code> permet donc un retour "à la ligne" dans un paragraphe.
-                    </p>
-                    <h5>Exemple paragraphes et retours chariot</h5>
-                    <p>
-                        Mon petit garçon
-                    </p>
-                    <p>
-                        n'est pas à l'école,<br />Donc je dois télétravailler
-                    </p>
+                <article class="col-lg-6 col-xl-4 col-xxl-3 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Les paragraphes</h4>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">
+                                Les paragraphes séparent <span class="danger">les blocs de texte en vertical</span>, mais s'il y
+                                a besoin d'un
+                                retour chariot au sein d'un paragraphe :<br />
+                                <code>&lt;p&gt;</code>. <br />
+                                La balise <code>&lt;br /&gt;</code> permet donc un retour "à la ligne" dans un paragraphe.
+                            </p>
+                            <h5>Exemple paragraphes et retours chariot</h5>
+                            <p class="card-text">
+                                Mon petit garçon
+                            </p>
+                            <p class="card-text">
+                                n'est pas à l'école,<br />Donc je dois télétravailler
+                            </p>
+                        </div>
+                    </div>
                 </article>
-                <article>
-                    <h4>Les listes non-ordonnées</h4>
-                    <h5>Les listes à un seul niveau</h5>
-                    <ul>
-                        <li>Élément de liste</li>
-                        <li>Élément de liste</li>
-                        <li>Élément de liste</li>
-                        <li>Élément de liste</li>
-                    </ul>
-                    <h5>Les listes à plusieurs niveaux</h5>
-                    <ul type="square">
-                        <li>Élément de liste</li>
-                        <li>
-                            Élément de liste
-                            <ul type="disc">
-                                <li>Élément de sous-liste</li>
+                <article class="col-lg-6 col-xl-4 col-xxl-3 mb-4">
+                    <div class="card">
+                        <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="card-img-top" />
+                        <div class="card-body">
+                            <h4>Les listes non-ordonnées</h4>
+                            <h5>Les listes à un seul niveau</h5>
+                            <ul>
+                                <li>Élément de liste</li>
+                                <li>Élément de liste</li>
+                                <li>Élément de liste</li>
+                                <li>Élément de liste</li>
+                            </ul>
+                            <h5>Les listes à plusieurs niveaux</h5>
+                            <ul type="square">
+                                <li>Élément de liste</li>
                                 <li>
-                                    Élément de sous-liste
-                                    <ul type="circle">
-                                        <li>Élément de sous-sous-liste</li>
-                                        <li>Élément de sous-sous-liste</li>
+                                    Élément de liste
+                                    <ul type="disc">
+                                        <li>Élément de sous-liste</li>
+                                        <li>
+                                            Élément de sous-liste
+                                            <ul type="circle">
+                                                <li>Élément de sous-sous-liste</li>
+                                                <li>Élément de sous-sous-liste</li>
+                                            </ul>
+                                        </li>
+                                        <li>Élément de sous-liste</li>
                                     </ul>
                                 </li>
-                                <li>Élément de sous-liste</li>
+                                <li>Élément de liste</li>
+                                <li>Élément de liste</li>
                             </ul>
-                        </li>
-                        <li>Élément de liste</li>
-                        <li>Élément de liste</li>
-                    </ul>
+                        </div>
+                    </div>
                 </article>
-                <article>
+                <article class="col-lg-8 col-xl-4 col-xxl-3 mb-4">
                     <h4>Les listes ordonnées</h4>
                     <h5>Les listes à un seul niveau</h5>
                     <ol>
@@ -157,7 +169,7 @@
                         <li>Élément de liste</li>
                     </ol>
                 </article>
-                <article>
+                <article class="col-lg-4 col-xl-4 col-xxl-3 mb-4">
                     <h4>Les listes "descriptives"</h4>
                     <dl>
                         <dt>Terme à décrire</dt>
@@ -178,7 +190,7 @@
                         <dd>"Les gens ont dans leurs yeux le bleu qui manque à leur décor"</dd>
                     </dl>
                 </article>
-                <article>
+                <article class="col-lg-6 col-xl-4 col-xxl-6 mb-4">
                     <h4>Les citations</h4>
                     <blockquote>
                         <p>
@@ -202,10 +214,10 @@
                         </p>
                     </blockquote>
                 </article>
-                <article>
+                <article class="col-lg-6 col-xl-4 col-xxl-6 mb-4">
                     <h4>Les tableaux</h4>
-                    <table>
-                        <caption>Exemple de tableau complet</caption>
+                    <table class="table table-bordered">
+                        <caption class="caption-top">Exemple de tableau complet</caption>
                         <thead>
                             <tr>
                                 <th role="columnheader">Entête n°1</th>
@@ -260,7 +272,7 @@
                     <p>
                         Tableau plus simple
                     </p>
-                    <table>
+                    <table border="1" cellspacing="0">
                         <tr style="background-color: white;">
                             <th role="columnheader"></th>
                             <th role="columnheader">1</th>
@@ -403,21 +415,25 @@
                         proche.
                     </p>
                     <p>
-                        2em
+                        <a href="#ex-em" title="Afficher l'exemple 2em" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="ex-em">2em</a> 
                     </p>
-                    <div style="font-size: 2em; border: 1px solid black">
-                        2em
+                    <div id="ex-em" class="collapse mb-2">
                         <div style="font-size: 2em; border: 1px solid black">
                             2em
+                            <div style="font-size: 2em; border: 1px solid black">
+                                2em
+                            </div>
                         </div>
                     </div>
                     <p>
-                        2rem
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ex-rem" aria-expanded="false" aria-controls="ex-rem" title="Afficher l'exemple 2rem">2rem</button>
                     </p>
-                    <div style="font-size: 2rem; border: 1px solid black">
-                        2rem
+                    <div class="collapse mb-2" id="ex-rem">
                         <div style="font-size: 2rem; border: 1px solid black">
                             2rem
+                            <div style="font-size: 2rem; border: 1px solid black">
+                                2rem
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -821,7 +837,7 @@
             </section>
         </section>
     </main>
-    <footer>
+    <footer data-bs-theme="dark" class="bg-dark text-white">
         <div class="container">
             &copy; DAWAN - Oct - 2025
         </div>

@@ -132,3 +132,16 @@
         transform: scaleX(1);
     }
 }
+
+.clignoter{
+    animation: clignoter 0.4s infinite alternate;
+}
+
+@keyframes clignoter {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
